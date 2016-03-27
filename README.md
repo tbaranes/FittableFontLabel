@@ -32,6 +32,18 @@ That's why `FittableFontLabel` exists:
 - Customisable from xibs / storyboards when using the UILabel's subclass `FittableFontLabel`
 - ...
 
+**Multilines `UILabel`:**
+
+![](./assets/demo.gif)
+
+**Multilines `UILabel` with attributed string (lines spacing):**
+
+![](./assets/demo_attributed.gif)
+
+**Single line `UILabel`:**
+
+![](./assets/demo_single_line.gif)
+
 ## Usage
 
 ```swift

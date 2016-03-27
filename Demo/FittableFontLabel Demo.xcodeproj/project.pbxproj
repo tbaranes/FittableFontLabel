@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2209AD11CA82FCC00C7D740 /* FittableFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2209AD01CA82FCC00C7D740 /* FittableFontLabel.swift */; };
+		E256760A1C4FCCF300F9E2D4 /* UILabel+FittableFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3AF241C4F8AA600EB275B /* UILabel+FittableFont.swift */; };
+		E2C3AF631C4FC0ED00EB275B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298E3EE1C4F8A41009704B1 /* AppDelegate.swift */; };
+		E2C3AF641C4FC0ED00EB275B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298E3F01C4F8A41009704B1 /* ViewController.swift */; };
+		E2C3AF651C4FC11200EB275B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E298E3F21C4F8A41009704B1 /* Main.storyboard */; };
+		E2C3AF661C4FC11500EB275B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E298E3F51C4F8A41009704B1 /* Assets.xcassets */; };
+		E2C3AF671C4FC11900EB275B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E298E3F71C4F8A41009704B1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2209AD01CA82FCC00C7D740 /* FittableFontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FittableFontLabel.swift; sourceTree = "<group>"; };
+		E298E3EE1C4F8A41009704B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E298E3F01C4F8A41009704B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E298E3F31C4F8A41009704B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E298E3F51C4F8A41009704B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E298E3F81C4F8A41009704B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E298E3FA1C4F8A41009704B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2C3AF241C4F8AA600EB275B /* UILabel+FittableFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+FittableFont.swift"; sourceTree = "<group>"; };
+		E2C3AF3E1C4FBFB300EB275B /* FittableFontLabel Demo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FittableFontLabel Demo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2C3AF3B1C4FBFB300EB275B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E298E3E21C4F8A41009704B1 = {
+			isa = PBXGroup;
+			children = (
+				E2C3AF231C4F8A9100EB275B /* Source */,
+				E298E3ED1C4F8A41009704B1 /* FittableFontLabel Demo iOS */,
+				E298E3EC1C4F8A41009704B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E298E3EC1C4F8A41009704B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2C3AF3E1C4FBFB300EB275B /* FittableFontLabel Demo iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E298E3ED1C4F8A41009704B1 /* FittableFontLabel Demo iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E298E3EE1C4F8A41009704B1 /* AppDelegate.swift */,
+				E298E3F01C4F8A41009704B1 /* ViewController.swift */,
+				E298E3F21C4F8A41009704B1 /* Main.storyboard */,
+				E298E3F51C4F8A41009704B1 /* Assets.xcassets */,
+				E298E3F71C4F8A41009704B1 /* LaunchScreen.storyboard */,
+				E298E3FA1C4F8A41009704B1 /* Info.plist */,
+			);
+			name = "FittableFontLabel Demo iOS";
+			path = "FittableFontLabel Demo/FittableFontLabel Demo iOS";
+			sourceTree = "<group>";
+		};
+		E2C3AF231C4F8A9100EB275B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E2C3AF241C4F8AA600EB275B /* UILabel+FittableFont.swift */,
+				E2209AD01CA82FCC00C7D740 /* FittableFontLabel.swift */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2C3AF3D1C4FBFB300EB275B /* FittableFontLabel Demo iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2C3AF4D1C4FBFB300EB275B /* Build configuration list for PBXNativeTarget "FittableFontLabel Demo iOS" */;
+			buildPhases = (
+				E2C3AF3A1C4FBFB300EB275B /* Sources */,
+				E2C3AF3B1C4FBFB300EB275B /* Frameworks */,
+				E2C3AF3C1C4FBFB300EB275B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FittableFontLabel Demo iOS";
+			productName = IncrementableLabel;
+			productReference = E2C3AF3E1C4FBFB300EB275B /* FittableFontLabel Demo iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E298E3E31C4F8A41009704B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Recisio;
+				TargetAttributes = {
+					E2C3AF3D1C4FBFB300EB275B = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = E298E3E61C4F8A41009704B1 /* Build configuration list for PBXProject "FittableFontLabel Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E298E3E21C4F8A41009704B1;
+			productRefGroup = E298E3EC1C4F8A41009704B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2C3AF3D1C4FBFB300EB275B /* FittableFontLabel Demo iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2C3AF3C1C4FBFB300EB275B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2C3AF671C4FC11900EB275B /* LaunchScreen.storyboard in Resources */,
+				E2C3AF661C4FC11500EB275B /* Assets.xcassets in Resources */,
+				E2C3AF651C4FC11200EB275B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2C3AF3A1C4FBFB300EB275B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2209AD11CA82FCC00C7D740 /* FittableFontLabel.swift in Sources */,
+				E2C3AF641C4FC0ED00EB275B /* ViewController.swift in Sources */,
+				E256760A1C4FCCF300F9E2D4 /* UILabel+FittableFont.swift in Sources */,
+				E2C3AF631C4FC0ED00EB275B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E298E3F21C4F8A41009704B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E298E3F31C4F8A41009704B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E298E3F71C4F8A41009704B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E298E3F81C4F8A41009704B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E298E3FB1C4F8A41009704B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E298E3FC1C4F8A41009704B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2C3AF4E1C4FBFB300EB275B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/FittableFontLabel Demo/FittableFontLabel Demo iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.recisio.IncrementableLabel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2C3AF4F1C4FBFB300EB275B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/FittableFontLabel Demo/FittableFontLabel Demo iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.recisio.IncrementableLabel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E298E3E61C4F8A41009704B1 /* Build configuration list for PBXProject "FittableFontLabel Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E298E3FB1C4F8A41009704B1 /* Debug */,
+				E298E3FC1C4F8A41009704B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2C3AF4D1C4FBFB300EB275B /* Build configuration list for PBXNativeTarget "FittableFontLabel Demo iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2C3AF4E1C4FBFB300EB275B /* Debug */,
+				E2C3AF4F1C4FBFB300EB275B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E298E3E31C4F8A41009704B1 /* Project object */;
+}

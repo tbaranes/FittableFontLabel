@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FittableFontLabel_Demo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfd-qm-BMt">
+                                <rect key="frame" x="0.0" y="-27" width="600" height="655"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multilines label that font fit width &amp; height" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxK-l4-Ls5" userLabel="Label - Title">
+                                        <rect key="frame" x="20" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FittableLabel width &amp; height" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWf-6S-6S8">
+                                        <rect key="frame" x="150" y="31" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="LMe-Cg-HvN"/>
+                                            <constraint firstAttribute="height" constant="100" id="dqM-Zp-ajr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multilines FittableFontLabel that font automatically fit width &amp; height" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsq-y8-GX8" userLabel="Label - Title">
+                                        <rect key="frame" x="20" y="181" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FittableLabel width &amp; height" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-Vm-ZT6" customClass="FittableFontLabel" customModule="FittableFontLabel_Demo_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="212" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="bXd-Me-DbZ"/>
+                                            <constraint firstAttribute="height" constant="100" id="nAu-Vm-fIQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoAdjustFontSize" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxFontSize">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One line label that font always fit width" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzB-W5-VaY" userLabel="Label - Title">
+                                        <rect key="frame" x="20" y="362" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d5-ra-WZD">
+                                        <rect key="frame" x="276" y="393" width="49" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="BEf-CY-xBD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BEf-CY-xBD"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multilines label with custom attributes (paragraph..) that font fit width &amp; height" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-W7-iya" userLabel="Label - Title">
+                                        <rect key="frame" x="20" y="467" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-0p-jWZ">
+                                        <rect key="frame" x="150" y="498" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="izy-c9-dTj"/>
+                                            <constraint firstAttribute="height" constant="100" id="tcS-71-kwe"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Attributed Label Fittable">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VzB-W5-VaY" firstAttribute="leading" secondItem="Cfd-qm-BMt" secondAttribute="leading" constant="20" id="5qk-qI-U2S"/>
+                                    <constraint firstItem="KTH-0p-jWZ" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="6Ia-5P-i8z"/>
+                                    <constraint firstItem="OWf-6S-6S8" firstAttribute="top" secondItem="lxK-l4-Ls5" secondAttribute="bottom" constant="10" id="7dj-eC-vJE"/>
+                                    <constraint firstItem="OWf-6S-6S8" firstAttribute="top" secondItem="Cfd-qm-BMt" secondAttribute="top" id="9Nr-vF-Yyu"/>
+                                    <constraint firstItem="4d5-ra-WZD" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="CW7-ga-ugb"/>
+                                    <constraint firstAttribute="bottom" secondItem="KTH-0p-jWZ" secondAttribute="bottom" constant="57" id="Feb-o3-LzR"/>
+                                    <constraint firstItem="Aod-Vm-ZT6" firstAttribute="top" secondItem="VzB-W5-VaY" secondAttribute="bottom" constant="-14.5" id="GcI-dU-Eij"/>
+                                    <constraint firstItem="lxK-l4-Ls5" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="ItM-y5-daw"/>
+                                    <constraint firstItem="lJc-W7-iya" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="Iuh-fl-voY"/>
+                                    <constraint firstItem="KTH-0p-jWZ" firstAttribute="top" secondItem="4d5-ra-WZD" secondAttribute="bottom" constant="20" id="JAX-YV-kuC"/>
+                                    <constraint firstItem="lxK-l4-Ls5" firstAttribute="leading" secondItem="Cfd-qm-BMt" secondAttribute="leading" constant="20" id="MYr-Ax-25o"/>
+                                    <constraint firstItem="4d5-ra-WZD" firstAttribute="top" secondItem="VzB-W5-VaY" secondAttribute="bottom" constant="10" id="Mx5-HY-TZE"/>
+                                    <constraint firstItem="Jsq-y8-GX8" firstAttribute="leading" secondItem="Cfd-qm-BMt" secondAttribute="leading" constant="20" id="OD7-w3-frH"/>
+                                    <constraint firstItem="Aod-Vm-ZT6" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="Qd6-l5-Biq"/>
+                                    <constraint firstItem="lJc-W7-iya" firstAttribute="top" secondItem="4d5-ra-WZD" secondAttribute="bottom" constant="50" id="T98-LZ-wtF"/>
+                                    <constraint firstItem="OWf-6S-6S8" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="YK4-FC-4Vj"/>
+                                    <constraint firstItem="KTH-0p-jWZ" firstAttribute="top" secondItem="lJc-W7-iya" secondAttribute="bottom" constant="10" id="Yxk-ah-JA9"/>
+                                    <constraint firstItem="4d5-ra-WZD" firstAttribute="top" secondItem="OWf-6S-6S8" secondAttribute="bottom" constant="20" id="ZMZ-qs-Qdv"/>
+                                    <constraint firstItem="Jsq-y8-GX8" firstAttribute="top" secondItem="OWf-6S-6S8" secondAttribute="bottom" constant="50" id="ame-6o-DWQ"/>
+                                    <constraint firstItem="VzB-W5-VaY" firstAttribute="top" secondItem="Aod-Vm-ZT6" secondAttribute="bottom" constant="50" id="cpZ-2p-pfD"/>
+                                    <constraint firstItem="Jsq-y8-GX8" firstAttribute="top" secondItem="OWf-6S-6S8" secondAttribute="bottom" constant="50" id="eLr-iq-LSS"/>
+                                    <constraint firstAttribute="trailing" secondItem="lJc-W7-iya" secondAttribute="trailing" constant="20" id="fEh-fy-7Qe"/>
+                                    <constraint firstItem="lxK-l4-Ls5" firstAttribute="top" secondItem="Cfd-qm-BMt" secondAttribute="top" id="fie-BO-S1N"/>
+                                    <constraint firstItem="Aod-Vm-ZT6" firstAttribute="top" secondItem="Jsq-y8-GX8" secondAttribute="bottom" constant="10" id="jIP-j7-4Vu"/>
+                                    <constraint firstItem="VzB-W5-VaY" firstAttribute="centerX" secondItem="Cfd-qm-BMt" secondAttribute="centerX" id="lmq-fZ-y7S"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jsq-y8-GX8" secondAttribute="trailing" constant="20" id="ovJ-Zz-Wkw"/>
+                                    <constraint firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" constant="20" id="sy0-bq-uOM"/>
+                                    <constraint firstItem="lxK-l4-Ls5" firstAttribute="leading" secondItem="OWf-6S-6S8" secondAttribute="leading" id="v7S-OR-7Yy"/>
+                                    <constraint firstItem="VzB-W5-VaY" firstAttribute="top" secondItem="4d5-ra-WZD" secondAttribute="bottom" constant="6" id="x1Q-aD-a8Y"/>
+                                    <constraint firstItem="VzB-W5-VaY" firstAttribute="top" secondItem="OWf-6S-6S8" secondAttribute="bottom" constant="50" id="xEN-Ar-Bvq"/>
+                                    <constraint firstAttribute="trailing" secondItem="VzB-W5-VaY" secondAttribute="trailing" constant="20" id="xHZ-ao-ecq"/>
+                                    <constraint firstItem="lJc-W7-iya" firstAttribute="leading" secondItem="Cfd-qm-BMt" secondAttribute="leading" constant="20" id="zUw-5F-qrg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ItM-y5-daw"/>
+                                        <exclude reference="v7S-OR-7Yy"/>
+                                        <exclude reference="9Nr-vF-Yyu"/>
+                                        <exclude reference="ame-6o-DWQ"/>
+                                        <exclude reference="GcI-dU-Eij"/>
+                                        <exclude reference="lmq-fZ-y7S"/>
+                                        <exclude reference="x1Q-aD-a8Y"/>
+                                        <exclude reference="xEN-Ar-Bvq"/>
+                                        <exclude reference="Iuh-fl-voY"/>
+                                        <exclude reference="ZMZ-qs-Qdv"/>
+                                        <exclude reference="JAX-YV-kuC"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cfd-qm-BMt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EwZ-of-wDH"/>
+                            <constraint firstAttribute="trailing" secondItem="Cfd-qm-BMt" secondAttribute="trailing" id="GaN-SU-ewD"/>
+                            <constraint firstItem="Cfd-qm-BMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZWQ-3C-drS"/>
+                            <constraint firstItem="Cfd-qm-BMt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ns5-sh-rKB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZWQ-3C-drS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="attributedLabelFittable" destination="KTH-0p-jWZ" id="I6D-pn-Rew"/>
+                        <outlet property="autoFittableLabel" destination="Aod-Vm-ZT6" id="OaV-AL-7IS"/>
+                        <outlet property="labelFittableWidth" destination="4d5-ra-WZD" id="LAI-uo-IFe"/>
+                        <outlet property="labelFittableWidthAndHeight" destination="OWf-6S-6S8" id="u5f-bq-cGO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

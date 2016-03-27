@@ -63,14 +63,6 @@ class ViewController: UIViewController {
     }
     
     func reloadLabels() {
-        let aFittableFontLabel = FittableFontLabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
-        aFittableFontLabel.autoFittableFont = true
-        aFittableFontLabel.lineBreakMode = .ByWordWrapping
-        aFittableFontLabel.numberOfLines = 0 // or 1...
-        aFittableFontLabel.text = "?"
-        // Change the text, it will always fit the label frame!
-
-        
         let random = Int(arc4random()) % self.words.count
         labelFittableWidthAndHeight.text = String(format: "%@ %@", labelFittableWidthAndHeight.text!, words[random])
         labelFittableWidthAndHeight.fontSizeToFit(maxFontSize: 50)

@@ -51,14 +51,21 @@ import UIKit
     
     // MARK: Life cycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        adjustFontSize()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        adjustFontSize()
     }
- 
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        adjustFontSize()
+    }
+    
     // MARK: 
     
     private func adjustFontSize() {

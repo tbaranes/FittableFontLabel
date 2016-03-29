@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E2209AD11CA82FCC00C7D740 /* FittableFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2209AD01CA82FCC00C7D740 /* FittableFontLabel.swift */; };
-		E256760A1C4FCCF300F9E2D4 /* UILabel+FittableFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3AF241C4F8AA600EB275B /* UILabel+FittableFont.swift */; };
+		E256760A1C4FCCF300F9E2D4 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3AF241C4F8AA600EB275B /* UILabelExtension.swift */; };
 		E2C3AF631C4FC0ED00EB275B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298E3EE1C4F8A41009704B1 /* AppDelegate.swift */; };
 		E2C3AF641C4FC0ED00EB275B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298E3F01C4F8A41009704B1 /* ViewController.swift */; };
 		E2C3AF651C4FC11200EB275B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E298E3F21C4F8A41009704B1 /* Main.storyboard */; };
@@ -24,7 +24,7 @@
 		E298E3F51C4F8A41009704B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E298E3F81C4F8A41009704B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E298E3FA1C4F8A41009704B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2C3AF241C4F8AA600EB275B /* UILabel+FittableFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+FittableFont.swift"; sourceTree = "<group>"; };
+		E2C3AF241C4F8AA600EB275B /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		E2C3AF3E1C4FBFB300EB275B /* FittableFontLabel Demo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FittableFontLabel Demo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 		E2C3AF231C4F8A9100EB275B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E2C3AF241C4F8AA600EB275B /* UILabel+FittableFont.swift */,
+				E2C3AF241C4F8AA600EB275B /* UILabelExtension.swift */,
 				E2209AD01CA82FCC00C7D740 /* FittableFontLabel.swift */,
 			);
 			name = Source;
@@ -153,7 +153,7 @@
 			files = (
 				E2209AD11CA82FCC00C7D740 /* FittableFontLabel.swift in Sources */,
 				E2C3AF641C4FC0ED00EB275B /* ViewController.swift in Sources */,
-				E256760A1C4FCCF300F9E2D4 /* UILabel+FittableFont.swift in Sources */,
+				E256760A1C4FCCF300F9E2D4 /* UILabelExtension.swift in Sources */,
 				E2C3AF631C4FC0ED00EB275B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

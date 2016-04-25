@@ -127,6 +127,15 @@ The biggest font size to use during drawing. The default value is the current fo
 
 The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
 
+```swift
+@IBInspectable public var leftInset: CGFloat = 0
+@IBInspectable public var rightInset: CGFloat = 0
+@IBInspectable public var topInset: CGFloat = 0
+@IBInspectable public var bottomInset: CGFloat = 0
+```
+
+These four properties allow you to set a marge in your label. That will change the rect where the font must fit. The default value is 0.
+
 ## What's next
 
 - [ ] Binary search to improve the performance

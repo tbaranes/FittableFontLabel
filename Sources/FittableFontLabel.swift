@@ -37,33 +37,11 @@ import UIKit
     /// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
     @IBInspectable public var minFontScale: CGFloat = CGFloat.NaN
     
-    /// Left inset
-    @IBInspectable public var leftInset: CGFloat = 20 {
-        didSet {
-//            invalidateIntrinsicContentSize()
-        }
-    }
-    
-    /// Right inset
-    @IBInspectable public var rightInset: CGFloat = 20 {
-        didSet {
-//            invalidateIntrinsicContentSize()
-        }
-    }
-    
-    /// Top inset
-    @IBInspectable public var topInset: CGFloat = 20 {
-        didSet {
-//            invalidateIntrinsicContentSize()
-        }
-    }
-    
-    /// Bottom inset
-    @IBInspectable public var bottomInset: CGFloat = 20 {
-        didSet {
-//            invalidateIntrinsicContentSize()
-        }
-    }
+    /// UIEdgeInset
+    @IBInspectable public var leftInset: CGFloat = 0
+    @IBInspectable public var rightInset: CGFloat = 0
+    @IBInspectable public var topInset: CGFloat = 0
+    @IBInspectable public var bottomInset: CGFloat = 0
     
     // MARK: Properties override
     

@@ -12,6 +12,20 @@ N/A
  
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [1.1.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.1.0) (25/04/2016)
+
+#### API breaking changes
+
+N/A
+ 
+#### Enhancements
+
 - `FittableFontLabel` now support `topInset`, `leftInset`, `bottomInset`, `rightInset`
 
 #### Bugfixes

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2C3AF3D1C4FBFB300EB275B"
-               BuildableName = "FittableFontLabel Demo iOS.app"
-               BlueprintName = "FittableFontLabel Demo iOS"
-               ReferencedContainer = "container:FittableFontLabel Demo.xcodeproj">
+               BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
+               BuildableName = "FittableFontLabel iOS.framework"
+               BlueprintName = "FittableFontLabel iOS"
+               ReferencedContainer = "container:FittableFontLabel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E2227AAB1CCE80C5006C4289"
+               BuildableName = "FittableFontLabel iOS Tests.xctest"
+               BlueprintName = "FittableFontLabel iOS Tests"
+               ReferencedContainer = "container:FittableFontLabel.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2C3AF3D1C4FBFB300EB275B"
-            BuildableName = "FittableFontLabel Demo iOS.app"
-            BlueprintName = "FittableFontLabel Demo iOS"
-            ReferencedContainer = "container:FittableFontLabel Demo.xcodeproj">
+            BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
+            BuildableName = "FittableFontLabel iOS.framework"
+            BlueprintName = "FittableFontLabel iOS"
+            ReferencedContainer = "container:FittableFontLabel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -51,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2C3AF3D1C4FBFB300EB275B"
-            BuildableName = "FittableFontLabel Demo iOS.app"
-            BlueprintName = "FittableFontLabel Demo iOS"
-            ReferencedContainer = "container:FittableFontLabel Demo.xcodeproj">
+            BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
+            BuildableName = "FittableFontLabel iOS.framework"
+            BlueprintName = "FittableFontLabel iOS"
+            ReferencedContainer = "container:FittableFontLabel.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2C3AF3D1C4FBFB300EB275B"
-            BuildableName = "FittableFontLabel Demo iOS.app"
-            BlueprintName = "FittableFontLabel Demo iOS"
-            ReferencedContainer = "container:FittableFontLabel Demo.xcodeproj">
+            BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
+            BuildableName = "FittableFontLabel iOS.framework"
+            BlueprintName = "FittableFontLabel iOS"
+            ReferencedContainer = "container:FittableFontLabel.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -28,13 +28,13 @@ import UIKit
     
     // MARK: Properties
     
-    // If true, the font size will be adjusted each time that the text or the frame change.
+    /// If true, the font size will be adjusted each time that the text or the frame change.
     @IBInspectable public var autoAdjustFontSize: Bool = true
     
-    // The biggest font size to use during drawing. The default value is the current font size
+    /// The biggest font size to use during drawing. The default value is the current font size
     @IBInspectable public var maxFontSize: CGFloat = CGFloat.NaN
     
-    // The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
+    /// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
     @IBInspectable public var minFontScale: CGFloat = CGFloat.NaN
     
     public override var text: String? {

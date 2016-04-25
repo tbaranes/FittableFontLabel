@@ -130,7 +130,6 @@ The scale factor that determines the smallest font size to use during drawing. T
 ## What's next
 
 - [ ] Binary search to improve the performance
-- [ ] Tests
 - Your features!
 
 ## Contribution

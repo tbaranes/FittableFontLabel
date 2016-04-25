@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FittableFontLabel
 
 class ViewController: UIViewController {
 

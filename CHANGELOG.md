@@ -12,7 +12,7 @@ N/A
  
 #### Enhancements
 
-N/A
+- `FittableFontLabel` now support `topInset`, `leftInset`, `bottomInset`, `rightInset`
 
 #### Bugfixes
 

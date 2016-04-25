@@ -37,6 +37,14 @@ import UIKit
     /// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
     @IBInspectable public var minFontScale: CGFloat = CGFloat.NaN
     
+    /// UIEdgeInset
+    @IBInspectable public var leftInset: CGFloat = 0
+    @IBInspectable public var rightInset: CGFloat = 0
+    @IBInspectable public var topInset: CGFloat = 0
+    @IBInspectable public var bottomInset: CGFloat = 0
+    
+    // MARK: Properties override
+    
     public override var text: String? {
         didSet {
             adjustFontSize()
@@ -74,10 +82,17 @@ import UIKit
         }
         isUpdatingFromIB = false
     }
-
+    
+    // MARK: Insets
+    
+    public override func drawTextInRect(rect: CGRect) {
+        let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
+    }
+    
 }
 
-// MARK:
+// MARK: Helpers
 
 private extension FittableFontLabel {
 

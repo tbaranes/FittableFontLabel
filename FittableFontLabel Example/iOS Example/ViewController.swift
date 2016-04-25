@@ -15,39 +15,37 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var autoFittableLabel: FittableFontLabel! {
         didSet {
-            autoFittableLabel.layer.borderWidth = 2.0
-            autoFittableLabel.layer.borderColor = UIColor.redColor().CGColor
-            autoFittableLabel.layer.cornerRadius = 3.0
+            setupLabel(autoFittableLabel)
         }
     }
     
     @IBOutlet weak var labelFittableWidthAndHeight: UILabel! {
         didSet {
             labelFittableWidthAndHeight.text = words[0]
-            labelFittableWidthAndHeight.layer.borderWidth = 2.0
-            labelFittableWidthAndHeight.layer.borderColor = UIColor.redColor().CGColor
-            labelFittableWidthAndHeight.layer.cornerRadius = 3.0
+            setupLabel(labelFittableWidthAndHeight)
         }
     }
     
     @IBOutlet weak var labelFittableWidth: UILabel!  {
         didSet {
-            labelFittableWidth.layer.borderWidth = 2.0
-            labelFittableWidth.layer.borderColor = UIColor.redColor().CGColor
-            labelFittableWidth.layer.cornerRadius = 3.0
+            setupLabel(labelFittableWidth)
             labelFittableWidth.text = words[0..<3].joinWithSeparator(" ")
         }
     }
     
     @IBOutlet weak var attributedLabelFittable: UILabel!  {
         didSet {
+            setupLabel(attributedLabelFittable)
             attributedLabelFittable.text = words[0]
-            attributedLabelFittable.layer.borderWidth = 2.0
-            attributedLabelFittable.layer.borderColor = UIColor.redColor().CGColor
-            attributedLabelFittable.layer.cornerRadius = 3.0
         }
     }
 
+    @IBOutlet weak var autoFittableLabelWithInsets: FittableFontLabel! {
+        didSet {
+            setupLabel(autoFittableLabelWithInsets)
+        }
+    }
+    
     // MARK: Properties 
     
     let words = [String](["apple", "orange", "banana", "grape", "kiwi", "mango", "lychee", "lemon", "coconut", "pear", "pineapple", "peach", "strawberry", "fig", "lime", "papaya", "nectarine", "plum", "quince", "raspberry", "ohajiki", "watermelon", "blackberry", "cherry", "avocado"])
@@ -63,11 +61,20 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
     }
     
+    private func setupLabel(label: UILabel) {
+        label.layer.borderWidth = 2.0
+        label.layer.borderColor = UIColor.redColor().CGColor
+        label.layer.cornerRadius = 3.0
+    }
+    
+    // MARK: 
+    
     func reloadLabels() {
         let random = Int(arc4random()) % self.words.count
         labelFittableWidthAndHeight.text = String(format: "%@ %@", labelFittableWidthAndHeight.text!, words[random])
         labelFittableWidthAndHeight.fontSizeToFit(maxFontSize: 50)
         autoFittableLabel.text = labelFittableWidthAndHeight.text
+        autoFittableLabelWithInsets.text = labelFittableWidthAndHeight.text
         
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 10.0

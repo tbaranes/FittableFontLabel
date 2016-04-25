@@ -49,25 +49,38 @@ import UIKit
         }
     }
     
+    // MARK: Private
+    
+    var isUpdatingFromIB = false
+    
     // MARK: Life cycle
     
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
+        isUpdatingFromIB = autoAdjustFontSize
         adjustFontSize()
     }
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        isUpdatingFromIB = autoAdjustFontSize
         adjustFontSize()
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        adjustFontSize()
+        if !isUpdatingFromIB {
+            adjustFontSize()
+        }
+        isUpdatingFromIB = false
     }
-    
-    // MARK: 
-    
+
+}
+
+// MARK:
+
+private extension FittableFontLabel {
+
     private func adjustFontSize() {
         if autoAdjustFontSize {
             fontSizeToFit(maxFontSize: maxFontSize, minFontScale: minFontScale)

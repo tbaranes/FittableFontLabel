@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FittableFontLabel_Demo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FittableFontLabel_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FittableLabel width &amp; height" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWf-6S-6S8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FittableLabel width &amp; height" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWf-6S-6S8" userLabel="Label Width And Height">
                                         <rect key="frame" x="150" y="81" width="300" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="LMe-Cg-HvN"/>
@@ -42,7 +42,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FittableLabel width &amp; height" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-Vm-ZT6" customClass="FittableFontLabel" customModule="FittableFontLabel_Demo_iOS" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FittableLabel width &amp; height" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-Vm-ZT6" customClass="FittableFontLabel" customModule="FittableFontLabel">
                                         <rect key="frame" x="150" y="262" width="300" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="bXd-Me-DbZ"/>
@@ -101,13 +101,45 @@
                                         </attributedString>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto fittable label with insets" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWW-rP-05L" userLabel="Label - Title">
+                                        <rect key="frame" x="10" y="698" width="550" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attributed Label Fittable" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C01-Kf-8C3" customClass="FittableFontLabel" customModule="FittableFontLabel">
+                                        <rect key="frame" x="150" y="729" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="PPO-u1-cCG"/>
+                                            <constraint firstAttribute="height" constant="100" id="kwd-cg-tci"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="aWW-rP-05L" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="2OO-Cc-53J"/>
                                     <constraint firstItem="Jsq-y8-GX8" firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" id="2dA-W9-lac"/>
                                     <constraint firstItem="VzB-W5-VaY" firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" id="4lI-79-0kl"/>
                                     <constraint firstItem="lJc-W7-iya" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="7XC-GY-2Ne"/>
                                     <constraint firstItem="KTH-0p-jWZ" firstAttribute="centerX" secondItem="kX3-9D-cKY" secondAttribute="centerX" id="7c0-TS-lAu"/>
                                     <constraint firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" constant="10" id="A6v-rP-M7Z"/>
+                                    <constraint firstItem="aWW-rP-05L" firstAttribute="top" secondItem="KTH-0p-jWZ" secondAttribute="bottom" constant="50" id="CMf-hB-7le"/>
                                     <constraint firstItem="VzB-W5-VaY" firstAttribute="top" secondItem="Aod-Vm-ZT6" secondAttribute="bottom" constant="50" id="Cdx-Ma-c2m"/>
                                     <constraint firstItem="Aod-Vm-ZT6" firstAttribute="centerX" secondItem="kX3-9D-cKY" secondAttribute="centerX" id="DKS-sK-eeu"/>
                                     <constraint firstItem="Aod-Vm-ZT6" firstAttribute="top" secondItem="Jsq-y8-GX8" secondAttribute="bottom" constant="10" id="DT9-sD-PQI"/>
@@ -116,25 +148,32 @@
                                     <constraint firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" constant="10" id="Iyh-wg-oF9"/>
                                     <constraint firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" constant="20" id="ODe-HA-LOG"/>
                                     <constraint firstItem="lJc-W7-iya" firstAttribute="top" secondItem="4d5-ra-WZD" secondAttribute="bottom" constant="50" id="P4b-ab-8HP"/>
+                                    <constraint firstItem="aWW-rP-05L" firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" id="S8E-BU-d0D"/>
+                                    <constraint firstItem="C01-Kf-8C3" firstAttribute="top" secondItem="aWW-rP-05L" secondAttribute="bottom" constant="10" id="Uwu-HW-hzt"/>
                                     <constraint firstItem="VzB-W5-VaY" firstAttribute="leading" secondItem="lxK-l4-Ls5" secondAttribute="leading" id="WMS-rE-jkL"/>
                                     <constraint firstItem="Jsq-y8-GX8" firstAttribute="top" secondItem="OWf-6S-6S8" secondAttribute="bottom" constant="50" id="XVL-WO-qBf"/>
                                     <constraint firstItem="lxK-l4-Ls5" firstAttribute="top" secondItem="kX3-9D-cKY" secondAttribute="top" constant="50" id="XaP-zF-VTI"/>
                                     <constraint firstItem="Jsq-y8-GX8" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="Yb6-CM-ITi"/>
+                                    <constraint firstItem="C01-Kf-8C3" firstAttribute="top" secondItem="aWW-rP-05L" secondAttribute="bottom" constant="10" id="ZWU-1G-T0Z"/>
                                     <constraint firstItem="Jsq-y8-GX8" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="axA-0z-f8K"/>
                                     <constraint firstItem="VzB-W5-VaY" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="byC-C5-pIB"/>
                                     <constraint firstItem="lJc-W7-iya" firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" id="cHG-Fm-f5a"/>
                                     <constraint firstAttribute="bottom" secondItem="KTH-0p-jWZ" secondAttribute="bottom" constant="20" id="d6g-wi-3hb"/>
                                     <constraint firstItem="4d5-ra-WZD" firstAttribute="top" secondItem="VzB-W5-VaY" secondAttribute="bottom" constant="10" id="fZw-DC-SGX"/>
+                                    <constraint firstAttribute="bottom" secondItem="C01-Kf-8C3" secondAttribute="bottom" constant="20" id="g8x-wU-GID"/>
                                     <constraint firstItem="OWf-6S-6S8" firstAttribute="top" secondItem="lxK-l4-Ls5" secondAttribute="bottom" constant="10" id="gJ7-v8-Eub"/>
                                     <constraint firstItem="VzB-W5-VaY" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="glT-ut-hE1"/>
                                     <constraint firstItem="Jsq-y8-GX8" firstAttribute="leading" secondItem="lxK-l4-Ls5" secondAttribute="leading" id="i9Y-90-wqY"/>
                                     <constraint firstItem="OWf-6S-6S8" firstAttribute="centerX" secondItem="kX3-9D-cKY" secondAttribute="centerX" id="igF-Zy-eGS"/>
                                     <constraint firstItem="lJc-W7-iya" firstAttribute="width" secondItem="lxK-l4-Ls5" secondAttribute="width" id="kIv-QG-UmS"/>
+                                    <constraint firstItem="KTH-0p-jWZ" firstAttribute="top" secondItem="aWW-rP-05L" secondAttribute="bottom" constant="237" id="mis-R2-A48"/>
                                     <constraint firstItem="Jsq-y8-GX8" firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" id="nUU-KA-Y5g"/>
                                     <constraint firstItem="KTH-0p-jWZ" firstAttribute="top" secondItem="lJc-W7-iya" secondAttribute="bottom" constant="10" id="q1N-sb-4gl"/>
                                     <constraint firstItem="VzB-W5-VaY" firstAttribute="trailing" secondItem="lxK-l4-Ls5" secondAttribute="trailing" id="qaK-1Z-wS5"/>
                                     <constraint firstItem="lxK-l4-Ls5" firstAttribute="top" secondItem="OWf-6S-6S8" secondAttribute="bottom" constant="-60" id="tnt-A7-rVY"/>
+                                    <constraint firstItem="C01-Kf-8C3" firstAttribute="centerX" secondItem="kX3-9D-cKY" secondAttribute="centerX" id="vvg-Iw-BtV"/>
                                     <constraint firstItem="lxK-l4-Ls5" firstAttribute="leading" secondItem="kX3-9D-cKY" secondAttribute="leading" constant="10" id="wKV-ge-XqI"/>
+                                    <constraint firstItem="aWW-rP-05L" firstAttribute="leading" secondItem="lxK-l4-Ls5" secondAttribute="leading" id="ygu-BF-fRc"/>
                                     <constraint firstItem="4d5-ra-WZD" firstAttribute="centerX" secondItem="kX3-9D-cKY" secondAttribute="centerX" id="zqJ-ex-5tW"/>
                                 </constraints>
                                 <variation key="default">
@@ -148,6 +187,9 @@
                                         <exclude reference="qaK-1Z-wS5"/>
                                         <exclude reference="cHG-Fm-f5a"/>
                                         <exclude reference="kIv-QG-UmS"/>
+                                        <exclude reference="d6g-wi-3hb"/>
+                                        <exclude reference="mis-R2-A48"/>
+                                        <exclude reference="Uwu-HW-hzt"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -172,6 +214,7 @@
                     <connections>
                         <outlet property="attributedLabelFittable" destination="KTH-0p-jWZ" id="I6D-pn-Rew"/>
                         <outlet property="autoFittableLabel" destination="Aod-Vm-ZT6" id="OaV-AL-7IS"/>
+                        <outlet property="autoFittableLabelWithInsets" destination="C01-Kf-8C3" id="XiV-hg-evS"/>
                         <outlet property="labelFittableWidth" destination="4d5-ra-WZD" id="LAI-uo-IFe"/>
                         <outlet property="labelFittableWidthAndHeight" destination="OWf-6S-6S8" id="u5f-bq-cGO"/>
                     </connections>

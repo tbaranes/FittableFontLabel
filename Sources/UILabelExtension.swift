@@ -38,7 +38,11 @@ public extension UILabel {
         fontSizeToFit(maxFontSize: maxFontSize, minimumFontScale: minFontScale, rectSize: rectSize)
     }
     
-    private func fontSizeToFit(maxFontSize maxFontSize: CGFloat, minimumFontScale: CGFloat, rectSize: CGSize) {
+}
+
+private extension UILabel {
+    
+    func fontSizeToFit(maxFontSize maxFontSize: CGFloat, minimumFontScale: CGFloat, rectSize: CGSize) {
         var newAttributes = currentAttributedStringAttributes()
         guard let text = self.text where text.characters.count != 0 && newAttributes.count > 0 else {
             return
@@ -64,13 +68,13 @@ public extension UILabel {
         } while fontSize > minimumFontSize
         font = newFont
     }
-
-    private func currentAttributedStringAttributes() -> [String : AnyObject] {
+    
+    func currentAttributedStringAttributes() -> [String : AnyObject] {
         var newAttributes = [String: AnyObject]()
         attributedText?.enumerateAttributesInRange(NSRange(0..<(text?.characters.count ?? 0)), options: .LongestEffectiveRangeNotRequired, usingBlock: { attributes, range, stop in
             newAttributes = attributes
         })
         return newAttributes
     }
-    
+
 }

@@ -24,7 +24,13 @@ import UIKit
 
 public extension UILabel {
     
-    // Resize the font to make the current text fit the label frame.
+    /**
+     Resize the font to make the current text fit the label frame.
+     
+     - parameter maxFontSize:  The max font size available
+     - parameter minFontScale: The min font scale that the font will have
+     - parameter rectSize:     Rect size where the label must fit
+     */
     public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = CGFloat.NaN, minFontScale: CGFloat = 0.1,rectSize: CGSize? = nil) {
         let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
@@ -66,4 +72,5 @@ public extension UILabel {
         })
         return newAttributes
     }
+    
 }

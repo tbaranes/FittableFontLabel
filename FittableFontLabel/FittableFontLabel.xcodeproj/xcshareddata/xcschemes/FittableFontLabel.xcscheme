@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
-               BuildableName = "FittableFontLabel iOS.framework"
+               BuildableName = "FittableFontLabel.framework"
                BlueprintName = "FittableFontLabel iOS"
                ReferencedContainer = "container:FittableFontLabel.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
-            BuildableName = "FittableFontLabel iOS.framework"
+            BuildableName = "FittableFontLabel.framework"
             BlueprintName = "FittableFontLabel iOS"
             ReferencedContainer = "container:FittableFontLabel.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
-            BuildableName = "FittableFontLabel iOS.framework"
+            BuildableName = "FittableFontLabel.framework"
             BlueprintName = "FittableFontLabel iOS"
             ReferencedContainer = "container:FittableFontLabel.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2227AA11CCE80C5006C4289"
-            BuildableName = "FittableFontLabel iOS.framework"
+            BuildableName = "FittableFontLabel.framework"
             BlueprintName = "FittableFontLabel iOS"
             ReferencedContainer = "container:FittableFontLabel.xcodeproj">
          </BuildableReference>

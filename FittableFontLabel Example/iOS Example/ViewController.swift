@@ -15,34 +15,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var autoFittableLabel: FittableFontLabel! {
         didSet {
-            setupLabel(autoFittableLabel)
+            setup(label: autoFittableLabel)
         }
     }
     
     @IBOutlet weak var labelFittableWidthAndHeight: UILabel! {
         didSet {
             labelFittableWidthAndHeight.text = words[0]
-            setupLabel(labelFittableWidthAndHeight)
+            setup(label: labelFittableWidthAndHeight)
         }
     }
     
     @IBOutlet weak var labelFittableWidth: UILabel!  {
         didSet {
-            setupLabel(labelFittableWidth)
-            labelFittableWidth.text = words[0..<3].joinWithSeparator(" ")
+            setup(label: labelFittableWidth)
+            labelFittableWidth.text = words[0..<3].joined(separator: " ")
         }
     }
     
     @IBOutlet weak var attributedLabelFittable: UILabel!  {
         didSet {
-            setupLabel(attributedLabelFittable)
+            setup(label: attributedLabelFittable)
             attributedLabelFittable.text = words[0]
         }
     }
 
     @IBOutlet weak var autoFittableLabelWithInsets: FittableFontLabel! {
         didSet {
-            setupLabel(autoFittableLabelWithInsets)
+            setup(label: autoFittableLabelWithInsets)
         }
     }
     
@@ -54,16 +54,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let timer = NSTimer.scheduledTimerWithTimeInterval(0.7, target: self, selector: #selector(reloadLabels), userInfo: nil, repeats: true);
-        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+        let timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(reloadLabels), userInfo: nil, repeats: true);
+        RunLoop.main().add(timer, forMode: RunLoopMode.commonModes)
         
         
         self.view.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
     }
     
-    private func setupLabel(label: UILabel) {
+    private func setup(label: UILabel) {
         label.layer.borderWidth = 2.0
-        label.layer.borderColor = UIColor.redColor().CGColor
+        label.layer.borderColor = UIColor.red().cgColor
         label.layer.cornerRadius = 3.0
     }
     
@@ -78,14 +78,14 @@ class ViewController: UIViewController {
         
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 10.0
-        paragraph.alignment = .Center
+        paragraph.alignment = .center
         let attributes = [NSParagraphStyleAttributeName: paragraph]
-        let attributedText = NSAttributedString(string: labelFittableWidthAndHeight.text!, attributes: attributes)
+        let attributedText = AttributedString(string: labelFittableWidthAndHeight.text!, attributes: attributes)
         attributedLabelFittable.attributedText = attributedText
         attributedLabelFittable.fontSizeToFit(maxFontSize: 50)
         
         let screenWidth = labelFittableWidth.window!.screen.bounds.width
-        let newWidth = CGFloat(arc4random()) % (screenWidth - 50.0)
+        let newWidth = CGFloat(arc4random_uniform(UInt32(screenWidth - 50.0)))
         labelFittableWidth.frame.size.width = newWidth
         labelFittableWidth.fontSizeToFit(maxFontSize: 50)
     }

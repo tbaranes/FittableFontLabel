@@ -9,7 +9,7 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Swift 3 compatibility
  
 #### Enhancements
 

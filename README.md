@@ -93,10 +93,9 @@ Just drag the `Source/*.swift` files into your project.
 ## UILabel extension
 
 ```swift
-func fontSizeToFit(
-		maxFontSize maxFontSize: CGFloat = 100, 
-		minFontScale: CGFloat = 0.1, 
-		rectSize: CGSize? = nil)
+func fontSizeToFit(maxFontSize: CGFloat = 100, 
+					  minFontScale: CGFloat = 0.1,
+					  rectSize: CGSize? = nil)
 ```
 
 Adjust the font size to make the current text fit the label frame.

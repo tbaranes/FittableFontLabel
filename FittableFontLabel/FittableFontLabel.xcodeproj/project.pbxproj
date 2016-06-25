@@ -159,7 +159,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tom Baranes";
 				TargetAttributes = {
 					E2227AA11CCE80C5006C4289 = {
@@ -356,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.FittableFontLabel;
 				PRODUCT_NAME = FittableFontLabel;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -376,6 +377,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.FittableFontLabelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -436,6 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.FittableFontLabel;
 				PRODUCT_NAME = FittableFontLabel;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = ReleaseTest;
 		};
@@ -446,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.FittableFontLabelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = ReleaseTest;
 		};

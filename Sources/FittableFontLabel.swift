@@ -32,10 +32,10 @@ import UIKit
     @IBInspectable public var autoAdjustFontSize: Bool = true
     
     /// The biggest font size to use during drawing. The default value is the current font size
-    @IBInspectable public var maxFontSize: CGFloat = CGFloat.NaN
+    @IBInspectable public var maxFontSize: CGFloat = CGFloat.nan
     
     /// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
-    @IBInspectable public var minFontScale: CGFloat = CGFloat.NaN
+    @IBInspectable public var minFontScale: CGFloat = CGFloat.nan
     
     /// UIEdgeInset
     @IBInspectable public var leftInset: CGFloat = 0
@@ -85,9 +85,9 @@ import UIKit
     
     // MARK: Insets
     
-    public override func drawTextInRect(rect: CGRect) {
+    public override func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
-        super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
+        super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
     
 }

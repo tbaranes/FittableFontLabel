@@ -40,7 +40,7 @@ N/A
 
 #### API breaking changes
 
-N/A
+- Swift 3 compatibility
  
 #### Enhancements
 

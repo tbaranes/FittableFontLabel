@@ -31,7 +31,7 @@ public extension UILabel {
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
      */
-    public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = CGFloat.NaN, minFontScale: CGFloat = 0.1,rectSize: CGSize? = nil) {
+    public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1,rectSize: CGSize? = nil) {
         let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
         let rectSize = rectSize ?? bounds.size

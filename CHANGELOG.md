@@ -12,7 +12,7 @@ N/A
  
 #### Enhancements
 
-N/A
+- Improvign default value of `fontSizeToFit` in `UILabelExtension`. Default value is now explicitly 100
 
 #### Bugfixes
 

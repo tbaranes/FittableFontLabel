@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     // MARK: 
     
     func reloadLabels() {
-        let random = Int(arc4random()) % self.words.count
+        let random = Int(arc4random_uniform(UInt32(self.words.count)))
         labelFittableWidthAndHeight.text = String(format: "%@ %@", labelFittableWidthAndHeight.text!, words[random])
         labelFittableWidthAndHeight.fontSizeToFit(maxFontSize: 50)
         autoFittableLabel.text = labelFittableWidthAndHeight.text

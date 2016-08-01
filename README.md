@@ -105,6 +105,21 @@ Adjust the font size to make the current text fit the label frame.
 - `minFontScale`: the scale factor that determines the smallest font size to use during drawing. The default value is 0.1
 - `rectSize`: the size where the text must fit. The default value is the label bounds
 
+```swift
+func fontSizeThatFits(
+        text string: String, 
+        maxFontSize: CGFloat = CGFloat.NaN, 
+        minFontScale: CGFloat = 0.1,
+        rectSize: CGSize? = nil) -> CGFloat
+```
+
+Returns the font size that can make the `text` parameter fit the label frame.
+
+- `text`: the text that needs to fit in the label
+- `maxFontSize`: the biggest font size that can be returned. The default value is 100
+- `minFontScale`: the scale factor that determines the smallest font size that can be returned. The default value is 0.1
+- `rectSize`: the size where the text must fit. The default value is the label bounds
+
 ## FittableFontLabel
 
 An `UILabel` subclass allowing you to automatize the process of adjusting the font size.

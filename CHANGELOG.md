@@ -13,6 +13,7 @@ N/A
 #### Enhancements
 
 - Improvign default value of `fontSizeToFit` in `UILabelExtension`. Default value is now explicitly 100
+- Added `fontSizeThatFits` method in `UILabelExtension` that returns a font size of the given text which can just fit the given `CGSize`.
 
 #### Bugfixes
 

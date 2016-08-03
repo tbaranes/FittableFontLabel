@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     private func setup(label: UILabel) {
         label.layer.borderWidth = 2.0
-        label.layer.borderColor = UIColor.red().cgColor
+        label.layer.borderColor = UIColor.red.cgColor
         label.layer.cornerRadius = 3.0
     }
     
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
         paragraph.lineSpacing = 10.0
         paragraph.alignment = .center
         let attributes = [NSParagraphStyleAttributeName: paragraph]
-        let attributedText = AttributedString(string: labelFittableWidthAndHeight.text!, attributes: attributes)
+        let attributedText = NSAttributedString(string: labelFittableWidthAndHeight.text!, attributes: attributes)
         attributedLabelFittable.attributedText = attributedText
         attributedLabelFittable.fontSizeToFit(maxFontSize: 50)
         

@@ -52,7 +52,7 @@ public extension UILabel {
         let rectSize = rectSize ?? bounds.size
         
         var newAttributes = currentAttributedStringAttributes()
-        guard string.characters.count != 0 && newAttributes.count > 0 else {
+        guard string.characters.count != 0 else {
             return self.font.pointSize
         }
         

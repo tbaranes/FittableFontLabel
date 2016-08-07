@@ -81,7 +81,11 @@ public extension UILabel {
 private extension UILabel {
     
     func fontSizeToFit(maxFontSize maxFontSize: CGFloat, minimumFontScale: CGFloat, rectSize: CGSize) {
-        let newFontSize = fontSizeThatFits(text: self.text!, maxFontSize: maxFontSize, minFontScale: minimumFontScale, rectSize: rectSize)
+        guard let unwrappedText = self.text else {
+            return
+        }
+
+        let newFontSize = fontSizeThatFits(text: unwrappedText, maxFontSize: maxFontSize, minFontScale: minimumFontScale, rectSize: rectSize)
         font = font.fontWithSize(newFontSize)
     }
     

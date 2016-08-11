@@ -49,37 +49,23 @@ public extension UILabel {
     public func fontSizeThatFits(text string: String, maxFontSize: CGFloat = CGFloat.NaN, minFontScale: CGFloat = 0.1,rectSize: CGSize? = nil) -> CGFloat {
         let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
+        let minimumFontSize = maxFontSize * minFontScale
         let rectSize = rectSize ?? bounds.size
-        
-        var newAttributes = currentAttributedStringAttributes()
         guard string.characters.count != 0 else {
             return self.font.pointSize
         }
-        
-        let minimumFontSize = maxFontSize * minFontScale
-        let boundingSize = numberOfLines == 1 ? CGSize(width: CGFloat.max, height: rectSize.height) : CGSize(width: rectSize.width, height: CGFloat.max)
-        var newFont = UIFont()
-        var fontSize = maxFontSize
-        repeat {
-            newFont = font.fontWithSize(fontSize)
-            newAttributes[NSFontAttributeName] = newFont
-            let area = string.boundingRectWithSize(boundingSize, options: .UsesLineFragmentOrigin, attributes: newAttributes, context: nil).size
-            if (numberOfLines == 1 && area.width <= rectSize.width) ||
-                (numberOfLines != 1 && area.height <= rectSize.height) {
-                break
-            }
-            
-            fontSize -= 1
-            if fontSize < minimumFontSize {
-                fontSize = minimumFontSize
-            }
-        } while fontSize > minimumFontSize
-        return fontSize
+
+
+        let constraintSize = numberOfLines == 1 ? CGSize(width: CGFloat.max, height: rectSize.height) : CGSize(width: rectSize.width, height: CGFloat.max)
+        return binarySearch(string, minSize: maxFontSize, maxSize: minimumFontSize, size: rectSize, constraintSize: constraintSize)
     }
+
 }
 
+// MARK: - Helpers
+
 private extension UILabel {
-    
+
     func fontSizeToFit(maxFontSize maxFontSize: CGFloat, minimumFontScale: CGFloat, rectSize: CGSize) {
         guard let unwrappedText = self.text else {
             return
@@ -95,6 +81,54 @@ private extension UILabel {
             newAttributes = attributes
         })
         return newAttributes
+    }
+
+}
+
+// MARK: - Search
+
+private extension UILabel {
+
+    enum FontSizeState {
+        case Fit, TooBig, TooSmall
+    }
+
+    func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {
+        guard maxSize > minSize else {
+            fatalError("maxSize \(maxSize) shouldn't be less than \(minSize)")
+        }
+
+        let fontSize = (minSize + maxSize) / 2;
+        var attributes = currentAttributedStringAttributes()
+        attributes[NSFontAttributeName] = font.fontWithSize(fontSize)
+
+        let rect = string.boundingRectWithSize(constraintSize, options: .UsesLineFragmentOrigin, attributes: attributes, context: nil)
+        let state = numberOfLines == 1 ? singleLineSizeState(rect, size: size, fontSize: fontSize) : multiLineSizeState(rect, size: size, fontSize: fontSize)
+        switch state {
+        case .Fit: return fontSize
+        case .TooBig: return binarySearch(string, minSize: minSize, maxSize: maxSize - 1, size: size, constraintSize: constraintSize)
+        case .TooSmall: return binarySearch(string, minSize: fontSize + 1, maxSize: maxSize, size: size, constraintSize: constraintSize)
+        }
+    }
+
+    func singleLineSizeState(rect: CGRect, size: CGSize, fontSize: CGFloat) -> FontSizeState {
+        if rect.width >= size.width + 10 && rect.width <= size.width {
+            return .Fit
+        } else if rect.width > size.width {
+            return .TooBig
+        } else {
+            return .TooSmall
+        }
+    }
+
+    func multiLineSizeState(rect: CGRect, size: CGSize, fontSize: CGFloat) -> FontSizeState {
+        if rect.height >= size.height + 10 && rect.height <= size.height {
+            return .Fit
+        } else if rect.height > size.height {
+            return .TooBig
+        } else {
+            return .TooSmall
+        }
     }
 
 }

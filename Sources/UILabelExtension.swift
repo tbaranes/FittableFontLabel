@@ -31,7 +31,7 @@ public extension UILabel {
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
      */
-    public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1,rectSize: CGSize? = nil) {
+    public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) {
         let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
         let rectSize = rectSize ?? bounds.size
@@ -46,7 +46,7 @@ public extension UILabel {
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
      */
-    public func fontSizeThatFits(text string: String, maxFontSize: CGFloat = CGFloat.NaN, minFontScale: CGFloat = 0.1,rectSize: CGSize? = nil) -> CGFloat {
+    public func fontSizeThatFits(text string: String, maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) -> CGFloat {
         let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
         let minimumFontSize = maxFontSize * minFontScale
@@ -122,9 +122,10 @@ private extension UILabel {
     }
 
     func multiLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
-        if rect.height >= size.height + 10 && rect.height <= size.height {
+        if rect.height >= size.height + 10 && rect.height <= size.height &&
+            rect.width >= size.width + 10 && rect.width <= size.width {
             return .Fit
-        } else if rect.height > size.height {
+        } else if rect.height > size.height || rect.width > size.width {
             return .TooBig
         } else {
             return .TooSmall

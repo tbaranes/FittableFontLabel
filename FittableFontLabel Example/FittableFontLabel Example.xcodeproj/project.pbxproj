@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23EA9A01D5E581200029673 /* FittableFontLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E251BE401CCE82CB00EA621A /* FittableFontLabel.framework */; };
+		E23EA9A11D5E581200029673 /* FittableFontLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E251BE401CCE82CB00EA621A /* FittableFontLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2C3AF631C4FC0ED00EB275B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298E3EE1C4F8A41009704B1 /* AppDelegate.swift */; };
 		E2C3AF641C4FC0ED00EB275B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298E3F01C4F8A41009704B1 /* ViewController.swift */; };
 		E2C3AF651C4FC11200EB275B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E298E3F21C4F8A41009704B1 /* Main.storyboard */; };
@@ -15,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E23EA9A21D5E581200029673 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E251BE3A1CCE82CB00EA621A /* FittableFontLabel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E2227AA11CCE80C5006C4289;
+			remoteInfo = "FittableFontLabel iOS";
+		};
 		E251BE3F1CCE82CB00EA621A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E251BE3A1CCE82CB00EA621A /* FittableFontLabel.xcodeproj */;
@@ -30,6 +39,20 @@
 			remoteInfo = "FittableFontLabel iOS Tests";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E23EA9A41D5E581200029673 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E23EA9A11D5E581200029673 /* FittableFontLabel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E251BE3A1CCE82CB00EA621A /* FittableFontLabel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FittableFontLabel.xcodeproj; path = ../FittableFontLabel/FittableFontLabel.xcodeproj; sourceTree = "<group>"; };
@@ -47,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23EA9A01D5E581200029673 /* FittableFontLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +80,7 @@
 		E251BE3B1CCE82CB00EA621A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E251BE401CCE82CB00EA621A /* FittableFontLabel iOS.framework */,
+				E251BE401CCE82CB00EA621A /* FittableFontLabel.framework */,
 				E251BE421CCE82CB00EA621A /* FittableFontLabel iOS Tests.xctest */,
 			);
 			name = Products;
@@ -102,10 +126,12 @@
 				E2C3AF3A1C4FBFB300EB275B /* Sources */,
 				E2C3AF3B1C4FBFB300EB275B /* Frameworks */,
 				E2C3AF3C1C4FBFB300EB275B /* Resources */,
+				E23EA9A41D5E581200029673 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E23EA9A31D5E581200029673 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = IncrementableLabel;
@@ -152,10 +178,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E251BE401CCE82CB00EA621A /* FittableFontLabel iOS.framework */ = {
+		E251BE401CCE82CB00EA621A /* FittableFontLabel.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = "FittableFontLabel iOS.framework";
+			path = FittableFontLabel.framework;
 			remoteRef = E251BE3F1CCE82CB00EA621A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -192,6 +218,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E23EA9A31D5E581200029673 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FittableFontLabel iOS";
+			targetProxy = E23EA9A21D5E581200029673 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E298E3F21C4F8A41009704B1 /* Main.storyboard */ = {
@@ -299,6 +333,7 @@
 		E2C3AF4E1C4FBFB300EB275B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -310,6 +345,7 @@
 		E2C3AF4F1C4FBFB300EB275B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

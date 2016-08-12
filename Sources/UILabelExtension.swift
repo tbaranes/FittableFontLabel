@@ -57,7 +57,7 @@ public extension UILabel {
 
 
         let constraintSize = numberOfLines == 1 ? CGSize(width: CGFloat.max, height: rectSize.height) : CGSize(width: rectSize.width, height: CGFloat.max)
-        return binarySearch(string, minSize: maxFontSize, maxSize: minimumFontSize, size: rectSize, constraintSize: constraintSize)
+        return binarySearch(string, minSize: minimumFontSize, maxSize: maxFontSize, size: rectSize, constraintSize: constraintSize)
     }
 
 }
@@ -95,7 +95,7 @@ private extension UILabel {
 
     func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {
         guard maxSize > minSize else {
-            fatalError("maxSize \(maxSize) shouldn't be less than \(minSize)")
+            return maxSize
         }
 
         let fontSize = (minSize + maxSize) / 2;
@@ -103,7 +103,7 @@ private extension UILabel {
         attributes[NSFontAttributeName] = font.fontWithSize(fontSize)
 
         let rect = string.boundingRectWithSize(constraintSize, options: .UsesLineFragmentOrigin, attributes: attributes, context: nil)
-        let state = numberOfLines == 1 ? singleLineSizeState(rect, size: size, fontSize: fontSize) : multiLineSizeState(rect, size: size, fontSize: fontSize)
+        let state = numberOfLines == 1 ? singleLineSizeState(rect, size: size) : multiLineSizeState(rect, size: size)
         switch state {
         case .Fit: return fontSize
         case .TooBig: return binarySearch(string, minSize: minSize, maxSize: maxSize - 1, size: size, constraintSize: constraintSize)
@@ -111,7 +111,7 @@ private extension UILabel {
         }
     }
 
-    func singleLineSizeState(rect: CGRect, size: CGSize, fontSize: CGFloat) -> FontSizeState {
+    func singleLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
         if rect.width >= size.width + 10 && rect.width <= size.width {
             return .Fit
         } else if rect.width > size.width {
@@ -121,7 +121,7 @@ private extension UILabel {
         }
     }
 
-    func multiLineSizeState(rect: CGRect, size: CGSize, fontSize: CGFloat) -> FontSizeState {
+    func multiLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
         if rect.height >= size.height + 10 && rect.height <= size.height {
             return .Fit
         } else if rect.height > size.height {

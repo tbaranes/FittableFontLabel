@@ -32,10 +32,12 @@ public extension UILabel {
      - parameter rectSize:     Rect size where the label must fit
      */
     public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) {
-        let maxFontSize = maxFontSize.isNaN ? 100 : maxFontSize
-        let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
-        let rectSize = rectSize ?? bounds.size
-        fontSizeToFit(maxFontSize: maxFontSize, minimumFontScale: minFontScale, rectSize: rectSize)
+        guard let unwrappedText = self.text else {
+            return
+        }
+
+        let newFontSize = fontSizeThatFits(text: unwrappedText, maxFontSize: maxFontSize, minFontScale: minFontScale, rectSize: rectSize)
+        font = font.fontWithSize(newFontSize)
     }
     
     /**
@@ -66,15 +68,6 @@ public extension UILabel {
 
 private extension UILabel {
 
-    func fontSizeToFit(maxFontSize maxFontSize: CGFloat, minimumFontScale: CGFloat, rectSize: CGSize) {
-        guard let unwrappedText = self.text else {
-            return
-        }
-
-        let newFontSize = fontSizeThatFits(text: unwrappedText, maxFontSize: maxFontSize, minFontScale: minimumFontScale, rectSize: rectSize)
-        font = font.fontWithSize(newFontSize)
-    }
-    
     func currentAttributedStringAttributes() -> [String : AnyObject] {
         var newAttributes = [String: AnyObject]()
         attributedText?.enumerateAttributesInRange(NSRange(0..<(text?.characters.count ?? 0)), options: .LongestEffectiveRangeNotRequired, usingBlock: { attributes, range, stop in

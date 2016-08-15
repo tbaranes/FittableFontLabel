@@ -151,11 +151,6 @@ The scale factor that determines the smallest font size to use during drawing. T
 
 These four properties allow you to set a marge in your label. That will change the rect where the font must fit. The default value is 0.
 
-## What's next
-
-- [ ] Binary search to improve the performance
-- Your features!
-
 ## Contribution
 
 - If you found a **bug**, open an **issue**

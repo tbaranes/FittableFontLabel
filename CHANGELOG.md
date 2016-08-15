@@ -13,7 +13,7 @@ N/A
  
 #### Enhancements
 
-N/A
+- Improving performance by using binary search instead of simple loop. That may prevent xcode freezing 
 
 #### Bugfixes
 

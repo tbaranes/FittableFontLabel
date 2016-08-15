@@ -108,7 +108,7 @@ Adjust the font size to make the current text fit the label frame.
 ```swift
 func fontSizeThatFits(
         text string: String, 
-        maxFontSize: CGFloat = CGFloat.NaN, 
+        maxFontSize: CGFloat = 100, 
         minFontScale: CGFloat = 0.1,
         rectSize: CGSize? = nil) -> CGFloat
 ```

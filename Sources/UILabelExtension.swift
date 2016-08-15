@@ -31,13 +31,13 @@ public extension UILabel {
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
      */
-    public func fontSizeToFit(maxFontSize maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) {
+    public func fontSizeToFit(maxFontSize: CGFloat = 100, minFontScale: CGFloat = 0.1, rectSize: CGSize? = nil) {
         guard let unwrappedText = self.text else {
             return
         }
 
         let newFontSize = fontSizeThatFits(text: unwrappedText, maxFontSize: maxFontSize, minFontScale: minFontScale, rectSize: rectSize)
-        font = font.fontWithSize(newFontSize)
+        font = font.withSize(newFontSize)
     }
     
     /**
@@ -58,8 +58,8 @@ public extension UILabel {
         }
 
 
-        let constraintSize = numberOfLines == 1 ? CGSize(width: CGFloat.max, height: rectSize.height) : CGSize(width: rectSize.width, height: CGFloat.max)
-        return binarySearch(string, minSize: minimumFontSize, maxSize: maxFontSize, size: rectSize, constraintSize: constraintSize)
+        let constraintSize = numberOfLines == 1 ? CGSize(width: CGFloat.greatestFiniteMagnitude, height: rectSize.height) : CGSize(width: rectSize.width, height: CGFloat.greatestFiniteMagnitude)
+        return binarySearch(string: string, minSize: minimumFontSize, maxSize: maxFontSize, size: rectSize, constraintSize: constraintSize)
     }
 
 }
@@ -70,7 +70,7 @@ private extension UILabel {
 
     func currentAttributedStringAttributes() -> [String : AnyObject] {
         var newAttributes = [String: AnyObject]()
-        attributedText?.enumerateAttributesInRange(NSRange(0..<(text?.characters.count ?? 0)), options: .LongestEffectiveRangeNotRequired, usingBlock: { attributes, range, stop in
+        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.characters.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, range, stop in
             newAttributes = attributes
         })
         return newAttributes
@@ -93,14 +93,14 @@ private extension UILabel {
 
         let fontSize = (minSize + maxSize) / 2;
         var attributes = currentAttributedStringAttributes()
-        attributes[NSFontAttributeName] = font.fontWithSize(fontSize)
+        attributes[NSFontAttributeName] = font.withSize(fontSize)
 
-        let rect = string.boundingRectWithSize(constraintSize, options: .UsesLineFragmentOrigin, attributes: attributes, context: nil)
-        let state = numberOfLines == 1 ? singleLineSizeState(rect, size: size) : multiLineSizeState(rect, size: size)
+        let rect = string.boundingRect(with: constraintSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        let state = numberOfLines == 1 ? singleLineSizeState(rect: rect, size: size) : multiLineSizeState(rect: rect, size: size)
         switch state {
         case .Fit: return fontSize
-        case .TooBig: return binarySearch(string, minSize: minSize, maxSize: maxSize - 1, size: size, constraintSize: constraintSize)
-        case .TooSmall: return binarySearch(string, minSize: fontSize + 1, maxSize: maxSize, size: size, constraintSize: constraintSize)
+        case .TooBig: return binarySearch(string: string, minSize: minSize, maxSize: maxSize - 1, size: size, constraintSize: constraintSize)
+        case .TooSmall: return binarySearch(string: string, minSize: fontSize + 1, maxSize: maxSize, size: size, constraintSize: constraintSize)
         }
     }
 

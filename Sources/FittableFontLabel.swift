@@ -24,7 +24,7 @@
 import UIKit
 
 // An UILabel subclass allowing you to automatize the process of adjusting the font size.
-@IBDesignable public class FittableFontLabel: UILabel {
+@IBDesignable open class FittableFontLabel: UILabel {
     
     // MARK: Properties
     
@@ -45,13 +45,13 @@ import UIKit
     
     // MARK: Properties override
     
-    public override var text: String? {
+    open override var text: String? {
         didSet {
             adjustFontSize()
         }
     }
     
-    public override var frame: CGRect {
+    open override var frame: CGRect {
         didSet {
             adjustFontSize()
         }
@@ -63,19 +63,19 @@ import UIKit
     
     // MARK: Life cycle
     
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         isUpdatingFromIB = autoAdjustFontSize
         adjustFontSize()
     }
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         isUpdatingFromIB = autoAdjustFontSize
         adjustFontSize()
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         if !isUpdatingFromIB {
             adjustFontSize()
@@ -85,7 +85,7 @@ import UIKit
     
     // MARK: Insets
     
-    public override func drawText(in rect: CGRect) {
+    open override func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
         super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
@@ -94,9 +94,9 @@ import UIKit
 
 // MARK: Helpers
 
-private extension FittableFontLabel {
+fileprivate extension FittableFontLabel {
 
-    private func adjustFontSize() {
+    func adjustFontSize() {
         if autoAdjustFontSize {
             fontSizeToFit(maxFontSize: maxFontSize, minFontScale: minFontScale)
         }

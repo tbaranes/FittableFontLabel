@@ -23,10 +23,10 @@
 import UIKit
 
 public extension UILabel {
-    
+
     /**
      Resize the font to make the current text fit the label frame.
-     
+
      - parameter maxFontSize:  The max font size available
      - parameter minFontScale: The min font scale that the font will have
      - parameter rectSize:     Rect size where the label must fit
@@ -39,10 +39,10 @@ public extension UILabel {
         let newFontSize = fontSizeThatFits(text: unwrappedText, maxFontSize: maxFontSize, minFontScale: minFontScale, rectSize: rectSize)
         font = font.withSize(newFontSize)
     }
-    
+
     /**
      Returns a font size of a specific string in a specific font that fits a specific size
-     
+
      - parameter text:         The text to use
      - parameter maxFontSize:  The max font size available
      - parameter minFontScale: The min font scale that the font will have
@@ -58,7 +58,9 @@ public extension UILabel {
         }
 
 
-        let constraintSize = numberOfLines == 1 ? CGSize(width: CGFloat.greatestFiniteMagnitude, height: rectSize.height) : CGSize(width: rectSize.width, height: CGFloat.greatestFiniteMagnitude)
+        let constraintSize = numberOfLines == 1 ?
+            CGSize(width: CGFloat.greatestFiniteMagnitude, height: rectSize.height) :
+            CGSize(width: rectSize.width, height: CGFloat.greatestFiniteMagnitude)
         return binarySearch(string: string, minSize: minimumFontSize, maxSize: maxFontSize, size: rectSize, constraintSize: constraintSize)
     }
 
@@ -91,7 +93,7 @@ private extension UILabel {
             return maxSize
         }
 
-        let fontSize = (minSize + maxSize) / 2;
+        let fontSize = (minSize + maxSize) / 2
         var attributes = currentAttributedStringAttributes()
         attributes[NSFontAttributeName] = font.withSize(fontSize)
 

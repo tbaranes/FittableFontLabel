@@ -28,6 +28,7 @@ N/A
 #### Bugfixes
 
 - Fixed `fontSizeThatFits` when used with empty strings
+- Improved issue with long strings in small labels getting truncated
 
 ## [1.2.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.2.0) (01/08/2016)
  

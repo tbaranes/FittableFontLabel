@@ -10,7 +10,17 @@ All notable changes to the project will be documented in this file.
 #### API breaking changes
 
 N/A
- 
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [1.3.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.3.0) (15/08/2016)
+
 #### Enhancements
 
 - Improving performance by using binary search instead of simple loop. That may prevent xcode freezing 

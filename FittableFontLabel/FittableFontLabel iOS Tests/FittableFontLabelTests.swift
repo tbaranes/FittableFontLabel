@@ -24,8 +24,6 @@ class FittableFontLabelTests: XCTestCase {
     let shortText = "Etiam turpis elit"
     // swiftlint:disable:next line_length
     let longText = "Etiam turpis elit, efficitur nec suscipit vitae, aliquam vitae lorem. Aenean mauris tortor, semper vel facilisis nec, facilisis ut neque. Aliquam erat volutpat. Nam eget varius mauris, ut condimentum quam. Duis ex nisi, iaculis in ex ut, lobortis pretium est. Sed non lorem venenatis, fermentum quam aliquet, ultrices arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ullamcorper convallis tellus, vitae bibendum mi dapibus in. Morbi pellentesque aliquet urna, id aliquet orci efficitur sed. Donec et mi urna. Proin sagittis semper massa in semper."
-
-  let optimalFontSize: CGFloat = 2.0703125
 }
 
 // MARK: - Single line
@@ -39,7 +37,7 @@ extension FittableFontLabelTests {
         label.text = longText
         let fontSize = label.fontSizeThatFits(text: longText, maxFontSize: 20, minFontScale: 0.1,
                                               rectSize: CGSize(width: 20, height: 20))
-        XCTAssertEqual(fontSize, optimalFontSize)
+        XCTAssertEqual(fontSize, 2.0)
     }
 
     func testSingleLine_expectingMaxSize() {
@@ -72,7 +70,7 @@ extension FittableFontLabelTests {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let fontSize = label.fontSizeThatFits(text: shortText, maxFontSize: 20, minFontScale: 0.1,
                                               rectSize: CGSize(width: 0, height: 0))
-        XCTAssertEqual(fontSize, optimalFontSize)
+        XCTAssertEqual(fontSize, 2.0)
     }
 
 }
@@ -89,7 +87,7 @@ extension FittableFontLabelTests {
         label.text = longText
         let fontSize = label.fontSizeThatFits(text: longText, maxFontSize: 20, minFontScale: 0.1,
                                               rectSize: CGSize(width: 0, height: 0))
-        XCTAssertEqual(fontSize, optimalFontSize)
+        XCTAssertEqual(fontSize, 2.0)
     }
 
     func testMultiline_expectingMaxSize() {
@@ -126,7 +124,7 @@ extension FittableFontLabelTests {
         label.numberOfLines = 0
         let fontSize = label.fontSizeThatFits(text: shortText, maxFontSize: 20, minFontScale: 0.1,
                                               rectSize: CGSize(width: 0, height: 0))
-        XCTAssertEqual(fontSize, optimalFontSize)
+        XCTAssertEqual(fontSize, 2.0)
     }
 
 }

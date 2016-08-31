@@ -100,12 +100,12 @@ private extension UILabel {
         // returning either side of min or max depending on the state
         let diff = maxSize - minSize
         guard diff > 0.1 else {
-          switch state {
-          case .TooSmall:
-            return maxSize
-          default:
-            return minSize
-          }
+            switch state {
+            case .TooSmall:
+                return maxSize
+            default:
+                return minSize
+            }
         }
 
         switch state {
@@ -126,6 +126,7 @@ private extension UILabel {
     }
 
     func multiLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
+        // if rect within 10 of size
         if rect.height < size.height + 10 &&
            rect.height > size.height - 10 &&
            rect.width > size.width + 10 &&

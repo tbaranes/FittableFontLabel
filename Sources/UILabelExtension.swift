@@ -89,17 +89,25 @@ private extension UILabel {
     }
 
     func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {
-        let diff = maxSize - minSize
-        guard diff > 0.1 else {
-            return maxSize
-        }
-
         let fontSize = (minSize + maxSize) / 2
         var attributes = currentAttributedStringAttributes()
         attributes[NSFontAttributeName] = font.withSize(fontSize)
 
         let rect = string.boundingRect(with: constraintSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         let state = numberOfLines == 1 ? singleLineSizeState(rect: rect, size: size) : multiLineSizeState(rect: rect, size: size)
+
+        // if the search range is smaller than 0.1 of a font size we stop
+        // returning either side of min or max depending on the state
+        let diff = maxSize - minSize
+        guard diff > 0.1 else {
+          switch state {
+          case .TooSmall:
+            return maxSize
+          default:
+            return minSize
+          }
+        }
+
         switch state {
         case .Fit: return fontSize
         case .TooBig: return binarySearch(string: string, minSize: minSize, maxSize: fontSize, size: size, constraintSize: constraintSize)

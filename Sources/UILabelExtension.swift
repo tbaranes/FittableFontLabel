@@ -89,7 +89,8 @@ private extension UILabel {
     }
 
     func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {
-        guard maxSize > minSize else {
+        let diff = maxSize - minSize
+        guard diff > 0.1 else {
             return maxSize
         }
 
@@ -101,8 +102,8 @@ private extension UILabel {
         let state = numberOfLines == 1 ? singleLineSizeState(rect: rect, size: size) : multiLineSizeState(rect: rect, size: size)
         switch state {
         case .Fit: return fontSize
-        case .TooBig: return binarySearch(string: string, minSize: minSize, maxSize: maxSize - 1, size: size, constraintSize: constraintSize)
-        case .TooSmall: return binarySearch(string: string, minSize: fontSize + 1, maxSize: maxSize, size: size, constraintSize: constraintSize)
+        case .TooBig: return binarySearch(string: string, minSize: minSize, maxSize: fontSize, size: size, constraintSize: constraintSize)
+        case .TooSmall: return binarySearch(string: string, minSize: fontSize, maxSize: maxSize, size: size, constraintSize: constraintSize)
         }
     }
 
@@ -117,8 +118,10 @@ private extension UILabel {
     }
 
     func multiLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
-        if rect.height >= size.height + 10 && rect.height <= size.height &&
-            rect.width >= size.width + 10 && rect.width <= size.width {
+        if rect.height < size.height + 10 &&
+           rect.height > size.height - 10 &&
+           rect.width > size.width + 10 &&
+           rect.width < size.width - 10 {
             return .Fit
         } else if rect.height > size.height || rect.width > size.width {
             return .TooBig

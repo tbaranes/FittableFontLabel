@@ -9,15 +9,11 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
-
-#### Enhancements
-
-N/A
+- Swift 3 compatibility
 
 #### Bugfixes
 
-N/A
+- Improved issue with long strings in small labels getting truncated
 
 ## [1.3.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.3.0) (15/08/2016)
 
@@ -28,7 +24,6 @@ N/A
 #### Bugfixes
 
 - Fixed `fontSizeThatFits` when used with empty strings
-- Improved issue with long strings in small labels getting truncated
 
 ## [1.2.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.2.0) (01/08/2016)
  
@@ -41,7 +36,7 @@ N/A
 
 #### API breaking changes
 
-- Swift 3 compatibility
+N/A
  
 #### Enhancements
 

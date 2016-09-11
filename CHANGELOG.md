@@ -4,8 +4,21 @@ All notable changes to the project will be documented in this file.
 
 ---
 
+## Next
 
-### Next
+#### API breaking changes
+
+N/A
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [1.4.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.4.0) (11-09-2016)
 
 #### API breaking changes
 

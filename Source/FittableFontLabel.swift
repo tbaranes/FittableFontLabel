@@ -24,79 +24,79 @@
 import UIKit
 
 // An UILabel subclass allowing you to automatize the process of adjusting the font size.
-@IBDesignable public class FittableFontLabel: UILabel {
-    
+@IBDesignable open class FittableFontLabel: UILabel {
+
     // MARK: Properties
-    
+
     /// If true, the font size will be adjusted each time that the text or the frame change.
     @IBInspectable public var autoAdjustFontSize: Bool = true
-    
+
     /// The biggest font size to use during drawing. The default value is the current font size
-    @IBInspectable public var maxFontSize: CGFloat = CGFloat.NaN
-    
+    @IBInspectable public var maxFontSize: CGFloat = CGFloat.nan
+
     /// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
-    @IBInspectable public var minFontScale: CGFloat = CGFloat.NaN
-    
+    @IBInspectable public var minFontScale: CGFloat = CGFloat.nan
+
     /// UIEdgeInset
     @IBInspectable public var leftInset: CGFloat = 0
     @IBInspectable public var rightInset: CGFloat = 0
     @IBInspectable public var topInset: CGFloat = 0
     @IBInspectable public var bottomInset: CGFloat = 0
-    
+
     // MARK: Properties override
-    
-    public override var text: String? {
+
+    open override var text: String? {
         didSet {
             adjustFontSize()
         }
     }
-    
-    public override var frame: CGRect {
+
+    open override var frame: CGRect {
         didSet {
             adjustFontSize()
         }
     }
-    
+
     // MARK: Private
-    
+
     var isUpdatingFromIB = false
-    
+
     // MARK: Life cycle
-    
-    public override func prepareForInterfaceBuilder() {
+
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         isUpdatingFromIB = autoAdjustFontSize
         adjustFontSize()
     }
-    
-    public override func awakeFromNib() {
+
+    open override func awakeFromNib() {
         super.awakeFromNib()
         isUpdatingFromIB = autoAdjustFontSize
         adjustFontSize()
     }
-    
-    public override func layoutSubviews() {
+
+    open override func layoutSubviews() {
         super.layoutSubviews()
         if !isUpdatingFromIB {
             adjustFontSize()
         }
         isUpdatingFromIB = false
     }
-    
+
     // MARK: Insets
-    
-    public override func drawTextInRect(rect: CGRect) {
+
+    open override func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
-        super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
+        super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
-    
+
 }
 
 // MARK: Helpers
 
-private extension FittableFontLabel {
+fileprivate extension FittableFontLabel {
 
-    private func adjustFontSize() {
+    func adjustFontSize() {
         if autoAdjustFontSize {
             fontSizeToFit(maxFontSize: maxFontSize, minFontScale: minFontScale)
         }

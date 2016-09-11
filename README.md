@@ -1,7 +1,7 @@
 # FittableFontLabel
 
 [![Travis](https://img.shields.io/travis/tbaranes/FittableFontLabel.svg)](https://travis-ci.org/tbaranes/FittableFontLabel)
-![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/FittableFontLabel.svg?style=flat)](https://github.com/tbaranes/FittableFontLabel)
 [![Platform](https://img.shields.io/cocoapods/p/FittableFontLabel.svg?style=flat)](http://cocoadocs.org/docsets/FittableFontLabel)
 ![License](https://img.shields.io/github/license/tbaranes/FittableFontLabel?style=flat)
@@ -93,10 +93,9 @@ Just drag the `Source/*.swift` files into your project.
 ## UILabel extension
 
 ```swift
-func fontSizeToFit(
-		maxFontSize maxFontSize: CGFloat = 100, 
-		minFontScale: CGFloat = 0.1, 
-		rectSize: CGSize? = nil)
+func fontSizeToFit(maxFontSize: CGFloat = 100, 
+					  minFontScale: CGFloat = 0.1,
+					  rectSize: CGSize? = nil)
 ```
 
 Adjust the font size to make the current text fit the label frame.

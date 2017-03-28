@@ -57,7 +57,6 @@ public extension UILabel {
             return self.font.pointSize
         }
 
-
         let constraintSize = numberOfLines == 1 ?
             CGSize(width: CGFloat.greatestFiniteMagnitude, height: rectSize.height) :
             CGSize(width: rectSize.width, height: CGFloat.greatestFiniteMagnitude)
@@ -72,7 +71,7 @@ private extension UILabel {
 
     func currentAttributedStringAttributes() -> [String : Any] {
         var newAttributes = [String: Any]()
-        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.characters.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, range, stop in
+        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.characters.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, _, _ in
             newAttributes = attributes
         })
         return newAttributes
@@ -85,7 +84,7 @@ private extension UILabel {
 private extension UILabel {
 
     enum FontSizeState {
-        case Fit, TooBig, TooSmall
+        case fit, tooBig, tooSmall
     }
 
     func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {

@@ -69,7 +69,7 @@ public extension UILabel {
 
 private extension UILabel {
 
-    func currentAttributedStringAttributes() -> [String : Any] {
+    func currentAttributedStringAttributes() -> [String: Any] {
         var newAttributes = [String: Any]()
         attributedText?.enumerateAttributes(in: NSRange(0..<(text?.characters.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, _, _ in
             newAttributes = attributes

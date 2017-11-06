@@ -18,6 +18,13 @@ N/A
 
 N/A
 
+## [1.5.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.4.0) (06-11-2017)
+
+
+#### Enhancements
+
+- Swift 4 and Xcode 9 support
+
 ## [1.4.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.4.0) (11-09-2016)
 
 #### API breaking changes

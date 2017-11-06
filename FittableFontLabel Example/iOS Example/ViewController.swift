@@ -68,7 +68,8 @@ class ViewController: UIViewController {
     }
     
     // MARK: 
-    
+
+    @objc
     func reloadLabels() {
         let random = Int(arc4random_uniform(UInt32(self.words.count)))
         labelFittableWidthAndHeight.text = String(format: "%@ %@", labelFittableWidthAndHeight.text!, words[random])
@@ -79,7 +80,7 @@ class ViewController: UIViewController {
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 10.0
         paragraph.alignment = .center
-        let attributes = [NSParagraphStyleAttributeName: paragraph]
+        let attributes = [NSAttributedStringKey.paragraphStyle: paragraph]
         let attributedText = NSAttributedString(string: labelFittableWidthAndHeight.text!, attributes: attributes)
         attributedLabelFittable.attributedText = attributedText
         attributedLabelFittable.fontSizeToFit(maxFontSize: 50)

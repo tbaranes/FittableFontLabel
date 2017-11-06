@@ -53,7 +53,7 @@ public extension UILabel {
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
         let minimumFontSize = maxFontSize * minFontScale
         let rectSize = rectSize ?? bounds.size
-        guard string.characters.count != 0 else {
+        guard string.count != 0 else {
             return self.font.pointSize
         }
 
@@ -72,7 +72,7 @@ private extension UILabel {
 
     func currentAttributedStringAttributes() -> [NSAttributedStringKey: Any] {
         var newAttributes = [NSAttributedStringKey: Any]()
-        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.characters.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, range, stop in
+        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, range, stop in
             newAttributes = attributes
         })
         return newAttributes

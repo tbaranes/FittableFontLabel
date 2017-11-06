@@ -24,7 +24,8 @@
 import UIKit
 
 // An UILabel subclass allowing you to automatize the process of adjusting the font size.
-@IBDesignable open class FittableFontLabel: UILabel {
+@IBDesignable
+open class FittableFontLabel: UILabel {
 
     // MARK: Properties
 
@@ -94,9 +95,9 @@ import UIKit
 
 // MARK: Helpers
 
-fileprivate extension FittableFontLabel {
+extension FittableFontLabel {
 
-    func adjustFontSize() {
+    private func adjustFontSize() {
         if autoAdjustFontSize {
             fontSizeToFit(maxFontSize: maxFontSize, minFontScale: minFontScale)
         }

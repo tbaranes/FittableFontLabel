@@ -24,7 +24,8 @@
 import UIKit
 
 // An UILabel subclass allowing you to automatize the process of adjusting the font size.
-@IBDesignable open class FittableFontLabel: UILabel {
+@IBDesignable
+open class FittableFontLabel: UILabel {
 
     // MARK: Properties
 
@@ -86,7 +87,7 @@ import UIKit
     // MARK: Insets
 
     open override func drawText(in rect: CGRect) {
-        let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
         super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
 

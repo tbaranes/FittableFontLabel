@@ -53,7 +53,7 @@ public extension UILabel {
         let minFontScale = minFontScale.isNaN ? 0.1 : minFontScale
         let minimumFontSize = maxFontSize * minFontScale
         let rectSize = rectSize ?? bounds.size
-        guard string.characters.count != 0 else {
+        guard !string.isEmpty else {
             return self.font.pointSize
         }
 

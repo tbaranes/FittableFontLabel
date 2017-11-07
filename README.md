@@ -2,9 +2,9 @@
 
 [![Travis](https://img.shields.io/travis/tbaranes/FittableFontLabel.svg)](https://travis-ci.org/tbaranes/FittableFontLabel)
 ![Language](https://img.shields.io/badge/language-Swift%204.0-orange.svg)
-[![CocoaPods](https://img.shields.io/cocoapods/v/FittableFontLabel.svg?style=flat)](https://github.com/tbaranes/FittableFontLabel)
 [![Platform](https://img.shields.io/cocoapods/p/FittableFontLabel.svg?style=flat)](http://cocoadocs.org/docsets/FittableFontLabel)
-![License](https://img.shields.io/github/license/tbaranes/FittableFontLabel?style=flat)
+[![CocoaPods](https://img.shields.io/cocoapods/v/FittableFontLabel.svg?style=flat)](https://github.com/tbaranes/FittableFontLabel)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 `UILabel` can shrink font size as follows:
 
@@ -63,13 +63,13 @@ Check the sample project for advanced usage.
 
 - iOS 8.0+
 
-### CocoaPods Installation
+### CocoaPods
 
-FittableFontLabel is available on CocoaPods. Just add the following to your Podfile:
+Add `pod FittableFontLabel` to your Podfile.
 
-```
-pod 'FittableFontLabel'
-```
+### Carthage
+
+Add `github "tbaranes/FittableFontLabel"` to your Cartfile.
 
 ### Swift Package Manager
 

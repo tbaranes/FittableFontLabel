@@ -18,7 +18,7 @@ N/A
 
 N/A
 
-## [1.5.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/1.4.0) (06-11-2017)
+## [2.0.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/2.0.0) (10-11-2017)
 
 
 #### Enhancements

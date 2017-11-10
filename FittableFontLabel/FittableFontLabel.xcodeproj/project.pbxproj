@@ -10,8 +10,8 @@
 		E2227AA61CCE80C5006C4289 /* FittableFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = E2227AA51CCE80C5006C4289 /* FittableFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2227AAD1CCE80C5006C4289 /* FittableFontLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2227AA21CCE80C5006C4289 /* FittableFontLabel.framework */; };
 		E2227AB21CCE80C5006C4289 /* FittableFontLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2227AB11CCE80C5006C4289 /* FittableFontLabelTests.swift */; };
-		E2A4B6631D84769C005E6710 /* FittableFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A4B6611D84769C005E6710 /* FittableFontLabel.swift */; };
-		E2A4B6641D84769C005E6710 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A4B6621D84769C005E6710 /* UILabelExtension.swift */; };
+		E2EFA1B41FB5915A00096E56 /* FittableFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EFA1B21FB5915A00096E56 /* FittableFontLabel.swift */; };
+		E2EFA1B51FB5915A00096E56 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EFA1B31FB5915A00096E56 /* UILabelExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,8 @@
 		E2227AAC1CCE80C5006C4289 /* FittableFontLabel iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FittableFontLabel iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2227AB11CCE80C5006C4289 /* FittableFontLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittableFontLabelTests.swift; sourceTree = "<group>"; };
 		E2227AB31CCE80C5006C4289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2A4B6611D84769C005E6710 /* FittableFontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FittableFontLabel.swift; sourceTree = "<group>"; };
-		E2A4B6621D84769C005E6710 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		E2EFA1B21FB5915A00096E56 /* FittableFontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FittableFontLabel.swift; sourceTree = "<group>"; };
+		E2EFA1B31FB5915A00096E56 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		E2227A981CCE80C5006C4289 = {
 			isa = PBXGroup;
 			children = (
-				E2A4B6601D84769C005E6710 /* Source */,
+				E2EFA1B11FB5915A00096E56 /* Source */,
 				E2227AA41CCE80C5006C4289 /* FittableFontLabel iOS */,
 				E2227AB01CCE80C5006C4289 /* FittableFontLabelTests */,
 				E2227AA31CCE80C5006C4289 /* Products */,
@@ -92,13 +92,14 @@
 			path = "FittableFontLabel iOS Tests";
 			sourceTree = "<group>";
 		};
-		E2A4B6601D84769C005E6710 /* Source */ = {
+		E2EFA1B11FB5915A00096E56 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E2A4B6611D84769C005E6710 /* FittableFontLabel.swift */,
-				E2A4B6621D84769C005E6710 /* UILabelExtension.swift */,
+				E2EFA1B21FB5915A00096E56 /* FittableFontLabel.swift */,
+				E2EFA1B31FB5915A00096E56 /* UILabelExtension.swift */,
 			);
-			path = Source;
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A4B6641D84769C005E6710 /* UILabelExtension.swift in Sources */,
-				E2A4B6631D84769C005E6710 /* FittableFontLabel.swift in Sources */,
+				E2EFA1B51FB5915A00096E56 /* UILabelExtension.swift in Sources */,
+				E2EFA1B41FB5915A00096E56 /* FittableFontLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

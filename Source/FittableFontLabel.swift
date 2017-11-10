@@ -95,9 +95,9 @@ open class FittableFontLabel: UILabel {
 
 // MARK: Helpers
 
-fileprivate extension FittableFontLabel {
+extension FittableFontLabel {
 
-    func adjustFontSize() {
+    private func adjustFontSize() {
         if autoAdjustFontSize {
             fontSizeToFit(maxFontSize: maxFontSize, minFontScale: minFontScale)
         }

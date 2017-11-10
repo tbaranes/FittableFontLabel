@@ -67,11 +67,11 @@ public extension UILabel {
 
 // MARK: - Helpers
 
-private extension UILabel {
+extension UILabel {
 
-    func currentAttributedStringAttributes() -> [String: Any] {
-        var newAttributes = [String: Any]()
-        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.characters.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, _, _ in
+    private func currentAttributedStringAttributes() -> [NSAttributedStringKey: Any] {
+        var newAttributes = [NSAttributedStringKey: Any]()
+        attributedText?.enumerateAttributes(in: NSRange(0..<(text?.count ?? 0)), options: .longestEffectiveRangeNotRequired, using: { attributes, _, _ in
             newAttributes = attributes
         })
         return newAttributes
@@ -81,16 +81,16 @@ private extension UILabel {
 
 // MARK: - Search
 
-private extension UILabel {
+extension UILabel {
 
-    enum FontSizeState {
+    private enum FontSizeState {
         case fit, tooBig, tooSmall
     }
 
-    func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {
+    private func binarySearch(string: String, minSize: CGFloat, maxSize: CGFloat, size: CGSize, constraintSize: CGSize) -> CGFloat {
         let fontSize = (minSize + maxSize) / 2
         var attributes = currentAttributedStringAttributes()
-        attributes[NSFontAttributeName] = font.withSize(fontSize)
+        attributes[NSAttributedStringKey.font] = font.withSize(fontSize)
 
         let rect = string.boundingRect(with: constraintSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         let state = numberOfLines == 1 ? singleLineSizeState(rect: rect, size: size) : multiLineSizeState(rect: rect, size: size)
@@ -100,7 +100,7 @@ private extension UILabel {
         let diff = maxSize - minSize
         guard diff > 0.1 else {
             switch state {
-            case .TooSmall:
+            case .tooSmall:
                 return maxSize
             default:
                 return minSize
@@ -108,33 +108,33 @@ private extension UILabel {
         }
 
         switch state {
-        case .Fit: return fontSize
-        case .TooBig: return binarySearch(string: string, minSize: minSize, maxSize: fontSize, size: size, constraintSize: constraintSize)
-        case .TooSmall: return binarySearch(string: string, minSize: fontSize, maxSize: maxSize, size: size, constraintSize: constraintSize)
+        case .fit: return fontSize
+        case .tooBig: return binarySearch(string: string, minSize: minSize, maxSize: fontSize, size: size, constraintSize: constraintSize)
+        case .tooSmall: return binarySearch(string: string, minSize: fontSize, maxSize: maxSize, size: size, constraintSize: constraintSize)
         }
     }
 
-    func singleLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
+    private func singleLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
         if rect.width >= size.width + 10 && rect.width <= size.width {
-            return .Fit
+            return .fit
         } else if rect.width > size.width {
-            return .TooBig
+            return .tooBig
         } else {
-            return .TooSmall
+            return .tooSmall
         }
     }
 
-    func multiLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
+    private func multiLineSizeState(rect: CGRect, size: CGSize) -> FontSizeState {
         // if rect within 10 of size
         if rect.height < size.height + 10 &&
            rect.height > size.height - 10 &&
            rect.width > size.width + 10 &&
            rect.width < size.width - 10 {
-            return .Fit
+            return .fit
         } else if rect.height > size.height || rect.width > size.width {
-            return .TooBig
+            return .tooBig
         } else {
-            return .TooSmall
+            return .tooSmall
         }
     }
 

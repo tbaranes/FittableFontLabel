@@ -1,7 +1,7 @@
 # FittableFontLabel
 
 [![Travis](https://img.shields.io/travis/tbaranes/FittableFontLabel.svg)](https://travis-ci.org/tbaranes/FittableFontLabel)
-![Language](https://img.shields.io/badge/language-Swift%204.0-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%204.2-orange.svg)
 [![Platform](https://img.shields.io/cocoapods/p/FittableFontLabel.svg?style=flat)](http://cocoadocs.org/docsets/FittableFontLabel)
 [![CocoaPods](https://img.shields.io/cocoapods/v/FittableFontLabel.svg?style=flat)](https://github.com/tbaranes/FittableFontLabel)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)

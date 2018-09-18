@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(reloadLabels), userInfo: nil, repeats: true);
-        RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
         
         
         self.view.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 10.0
         paragraph.alignment = .center
-        let attributes = [NSAttributedStringKey.paragraphStyle: paragraph]
+        let attributes = [NSAttributedString.Key.paragraphStyle: paragraph]
         let attributedText = NSAttributedString(string: labelFittableWidthAndHeight.text!, attributes: attributes)
         attributedLabelFittable.attributedText = attributedText
         attributedLabelFittable.fontSizeToFit(maxFontSize: 50)

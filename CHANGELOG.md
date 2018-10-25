@@ -16,7 +16,7 @@ N/A
 
 #### Bugfixes
 
-N/A
+- Fix rounding when calculated font size has long decimals therefore rendering results with cutting off the last line (probably due to rounding up in UILabel rendering)
 
 ## [3.0.0](https://github.com/tbaranes/FittableFontLabel/releases/tag/3.0.0) (18-09-2018)
 

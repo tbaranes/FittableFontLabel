@@ -60,7 +60,8 @@ public extension UILabel {
         let constraintSize = numberOfLines == 1 ?
             CGSize(width: CGFloat.greatestFiniteMagnitude, height: rectSize.height) :
             CGSize(width: rectSize.width, height: CGFloat.greatestFiniteMagnitude)
-        return binarySearch(string: string, minSize: minimumFontSize, maxSize: maxFontSize, size: rectSize, constraintSize: constraintSize)
+        let calculatedFontSize = binarySearch(string: string, minSize: minimumFontSize, maxSize: maxFontSize, size: rectSize, constraintSize: constraintSize)
+        return (calculatedFontSize * 10.0).rounded(.down) / 10.0
     }
 
 }

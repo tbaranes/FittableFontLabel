@@ -22,7 +22,7 @@
 
 import UIKit
 
-public extension UILabel {
+extension UILabel {
 
     /**
      Resize the font to make the current text fit the label frame.

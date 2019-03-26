@@ -12,7 +12,7 @@ N/A
 
 #### Enhancements
 
-N/A
+- Swift 5 and Xcode 10.2 support
 
 #### Bugfixes
 

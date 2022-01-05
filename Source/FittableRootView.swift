@@ -44,7 +44,6 @@ open class FittableRootView: UIView {
     
     private func updateFontSizeLinks(in view: UIView) {
         for subview in view.subviews {
-            print(subview.self)
             if let label = subview as? FittableFontLabel {
                 if let fontSizeLinkIdentifier = label.fontSizeLinkIdentifier {
                     if let fontSizeLink = fontSizeLinks[fontSizeLinkIdentifier] {

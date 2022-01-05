@@ -1,5 +1,5 @@
 //
-//  FittableLabelRoot.swift
+//  FittableRootView.swift
 //  
 //
 //  Created by Tyson_Freeze on 12/31/21.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// A UIView subclass to give the FittableFontLabel package a root to recursively search for UILabels within.
-open class FittableLabelRoot: UIView {
+open class FittableRootView: UIView {
     
     /// If true, this view and it's subviews will be searched for any UILabels with a fontSizeLinkIdentifier.
     @IBInspectable public var searchView: Bool = true

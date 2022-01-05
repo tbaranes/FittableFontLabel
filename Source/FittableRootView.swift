@@ -36,8 +36,10 @@ open class FittableRootView: UIView {
     // MARK: Life cycle
 
     open override func draw(_ rect: CGRect) {
-        updateFontSizeLinks(in: self)
-        standardizeFontSizes()
+        if searchView {
+            updateFontSizeLinks(in: self)
+            standardizeFontSizes()
+        }
     }
     
     // MARK: Search
@@ -45,7 +47,7 @@ open class FittableRootView: UIView {
     private func updateFontSizeLinks(in view: UIView) {
         for subview in view.subviews {
             if let label = subview as? FittableFontLabel {
-                if let fontSizeLinkIdentifier = label.fontSizeLinkIdentifier {
+                if let fontSizeLinkIdentifier = label.linkIdentifier {
                     if let fontSizeLink = fontSizeLinks[fontSizeLinkIdentifier] {
                         fontSizeLink.add(label: label)
                     } else {

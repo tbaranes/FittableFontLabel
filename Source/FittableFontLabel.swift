@@ -43,6 +43,9 @@ open class FittableFontLabel: UILabel {
     @IBInspectable public var rightInset: CGFloat = 0
     @IBInspectable public var topInset: CGFloat = 0
     @IBInspectable public var bottomInset: CGFloat = 0
+    
+    /// Identifier
+    @IBInspectable public var linkIdentifier: String?
 
     // MARK: Properties override
 

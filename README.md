@@ -19,6 +19,7 @@ But it won't always work as expected:
 - Doesn't fit the label height
 - Big top / bottom margins when the maxFontSize is huge
 - Not really customisable
+- Can't keep font size consistent across multiple labels
 - ...
 
 That's why `FittableFontLabel` exists:
@@ -28,6 +29,7 @@ That's why `FittableFontLabel` exists:
 - Supports attributed string (custom line spacing...)
 - Customize `maxFontSize` without using default label font size
 - Auto-layout compliant
+- Keep font size consistent across multiple labels using 'FittableRootView'
 - `UILabel` extension if we want to use `UILabel`
 - Customisable from xibs / storyboards when using the UILabel's subclass `FittableFontLabel`
 - ...
@@ -44,8 +46,13 @@ That's why `FittableFontLabel` exists:
 
 ![](./assets/demo_single_line.gif)
 
+**Consistent font size across multiple labels `FittableRootView`**
+
+![](./assets/visual_fittable_root_view.png)
+
 ## Usage
 
+### FittableFontLabel
 ```swift
 let aFittableFontLabel = FittableFontLabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
 aFittableFontLabel.autoFittableFont = true
@@ -58,6 +65,16 @@ aFittableFontLabel.text = "?"
 Check the sample project for advanced usage.
 
 **Note:** The label `lineBreakMode` must be set to `NSLineBreakByWordWrapping` in order to work.
+
+### FittableRootView
+To get a consistent font size across multiple labels embed your FittableFontLabels in a `UIView` with the custom class `FittableRootView`. Then give each label you want to keep consistent the same link identifer. 
+
+The FittableRootView acts as the root of a search for FittableFontLabels with link identifiers. Every FittableFontLabel with an identifier found by the search is updated to use the smallest auto adjusted font size calculated for that identifier.
+
+**Notes:** 
+- FittableRootView has an inspectable bool `searchView`. This allows you to disable the search, giving the `FittableRootView` identical behavior to a normal `UIView`. 
+- You can use multiple identifiers to standardize the font size across multiple sets of labels within the same view.
+- When AutoAdjustFontSize is false, that label's font size is ignored in the search for smallest font size. This way if you know which label is going to be longest (i.e. the smallest font size) you can avoid computing font sizes that will go unused while still keeping font size consistent.
 
 ## Installation
 
@@ -76,6 +93,7 @@ Add `github "tbaranes/FittableFontLabel"` to your Cartfile.
 FittableFontLabel is available on SPM. Just add the following to your Package file:
 
 ```swift
+// swift-tools-version:5.5.0
 import PackageDescription
 
 let package = Package(
@@ -148,7 +166,7 @@ The scale factor that determines the smallest font size to use during drawing. T
 @IBInspectable public var bottomInset: CGFloat = 0
 ```
 
-These four properties allow you to set a marge in your label. That will change the rect where the font must fit. The default value is 0.
+These four properties allow you to set a margin on your label. That will change the rect where the font must fit. The default value is 0.
 
 ## Contribution
 
